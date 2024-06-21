@@ -1,0 +1,82 @@
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap';
+
+export const BenefitMeta = () => {
+    return (
+        <>
+            <Container>
+                <Row className="justify-content-center mb-4">
+                    <Col className="text-center">
+                        <h5 className="mt-3 mb-3" style={{ textAlign: 'left' }}>
+                            <svg
+                                stroke="currentColor"
+                                fill="currentColor"
+                                strokeWidth="0"
+                                viewBox="0 0 256 256"
+                                height="1em"
+                                width="1em"
+                                xmlns="http://www.w3.org/2000/svg"
+                                style={{ fontSize: '2rem' }}
+                            >
+                                <path d="M217,34.8a15.94,15.94,0,0,0-14.82-1.71C188.15,38.55,159.82,47.71,128,47.71S67.84,38.55,53.79,33.09A16,16,0,0,0,32,48v55.77c0,35.84,9.65,69.65,27.18,95.18,18.16,26.46,42.6,41,68.82,41s50.66-14.57,68.82-41C214.35,173.44,224,139.63,224,103.79V48A16,16,0,0,0,217,34.8Zm-9,69c0,32.64-8.66,63.23-24.37,86.13C168.54,211.9,148.79,224,128,224s-40.54-12.1-55.63-34.08C56.66,167,48,136.43,48,103.79V48c15.11,5.87,45.58,15.71,80,15.71S192.9,53.87,208,48v55.81Zm-18,18.87A8,8,0,1,1,178,133.33c-2.68-3-8.85-5.33-14-5.33s-11.36,2.34-14,5.33A8,8,0,1,1,138,122.66c5.71-6.38,16.14-10.66,26-10.66S184.25,116.28,190,122.66ZM92,128c-5.19,0-11.36,2.34-14,5.33A8,8,0,1,1,66,122.66C71.75,116.28,82.18,112,92,112s20.25,4.28,26,10.66A8,8,0,1,1,106,133.33C103.36,130.34,97.19,128,92,128Zm76.45,45.19a52.9,52.9,0,0,1-80.9,0A8,8,0,1,1,99.72,162.8a36.89,36.89,0,0,0,56.56,0,8,8,0,0,1,12.17,10.39Z"></path>
+                            </svg>{' '}
+                            Benefits
+                        </h5>
+                    </Col>
+                </Row>
+                <Row className="mb-1">
+                    <Col lg={2} sm={12} className='mb-3'>
+                        <div className="BenefitContent">
+                            <img src="https://futurristic.com/image/video/Metaverse/01-Benefits.png" className="img-fluid benefitIcons" alt="" />
+                            <div className="vstack gap-1">
+                                <h5 className="mb-2 fontWeight-500 fontSize-18">Immersive Brand Presence</h5>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={2} sm={12} className='mb-3'>
+                        <div className="BenefitContent">
+                            <img src="https://futurristic.com/image/video/Metaverse/02-Benefits.png" className="img-fluid benefitIcons" alt="" />
+                            <div className="vstack gap-1">
+                                <h5 className="mb-2 fontWeight-500 fontSize-18">Enhanced Customer Engagement</h5>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={2} sm={12} className='mb-3'>
+                        <div className="BenefitContent">
+                            <img src="https://futurristic.com/image/video/Metaverse/03-Benefits.png" className="img-fluid benefitIcons" alt="" />
+                            <div className="vstack gap-1">
+                                <h5 className="mb-2 fontWeight-500 fontSize-18">Innovative Marketing and Sales Platforms</h5>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={2} sm={12} className='mb-3'>
+                        <div className="BenefitContent">
+                            <img src="https://futurristic.com/image/video/Metaverse/04-Benefits.png" className="img-fluid benefitIcons" alt="" />
+                            <div className="vstack gap-1">
+                                <h5 className="mb-0 fontWeight-500 fontSize-18">Data-Driven Insights for Business Growth</h5>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={2} sm={12} className='mb-3'>
+                        <div className="BenefitContent">
+                            <img src="https://futurristic.com/image/video/Metaverse/05-Benefits.png" className="img-fluid benefitIcons" alt="" />
+                            <div className="vstack gap-1">
+                                <h5 className="mb-0 fontWeight-500 fontSize-18">Future-Proofing Your Business</h5>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={2} sm={12} className='mb-3'>
+                        <div className="BenefitContent">
+                            <img src="https://futurristic.com/image/video/Metaverse/06-Benefits.png" className="img-fluid benefitIcons" alt="" />
+                            <div className="vstack gap-1">
+                                <h5 className="mb-0 fontWeight-500 fontSize-18">Scalability and Flexibility</h5>
+                            </div>
+                        </div>
+                    </Col>
+
+                </Row>
+                <div className="mt-5 mb-3 row"></div>
+            </Container>
+        </>
+    )
+}
