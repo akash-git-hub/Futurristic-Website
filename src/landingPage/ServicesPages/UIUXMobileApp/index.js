@@ -22,7 +22,7 @@ export const MobileApp = () => {
       <AboutMobileApp />
       <MobileAppservice />
       <BenefitsMobileApp />
-      <MobileAppTool />
+      {/* <MobileAppTool /> */}
       <MobileAppPortfolio/>
       <ContactUs />
       <Footer />

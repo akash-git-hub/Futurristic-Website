@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const ServiceMeta = () => {
     return (
@@ -8,102 +9,141 @@ export const ServiceMeta = () => {
                 <Container>
                     <div className="justify-content-center mb-4 row">
                         <div className="text-center col">
-                            <h5 className="mt-3 mb-3" style={{ textAlign: 'left' }}>
-                                <svg
-                                    stroke="currentColor"
-                                    fill="currentColor"
-                                    strokeWidth="0"
-                                    viewBox="0 0 256 256"
-                                    height="1em"
-                                    width="1em"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style={{ fontSize: '2rem' }}
-                                >
-                                    <path
-                                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm73.23,146.26c-5.63,9-14.33,13.74-25.16,13.74-20.73,0-34.81-25.31-49.72-52.11C115.47,112.33,101.93,88,90.61,88,78.18,88,64,116.88,64,142.21c0,8.26,1.5,15,4.34,19.56C71,166,74.68,168,79.93,168c6.08,0,13.52-7,22.74-21.51a8,8,0,0,1,13.49,8.59C99.84,180.71,88.22,184,79.93,184c-10.83,0-19.53-4.75-25.16-13.74-4.43-7.08-6.77-16.78-6.77-28A103.13,103.13,0,0,1,59,97.06C67.34,80.9,78.57,72,90.61,72c20.73,0,34.81,25.31,49.72,52.11C151.21,143.66,164.75,168,176.07,168c5.25,0,8.93-2,11.59-6.23,2.84-4.53,4.34-11.3,4.34-19.56C192,116.88,177.82,88,165.39,88c-3.4,0-7.35,2.31-11.74,6.88a8,8,0,1,1-11.54-11.09C149.74,75.86,157.35,72,165.39,72c12,0,23.27,8.9,31.62,25.06a103.13,103.13,0,0,1,11,45.15C208,153.48,205.66,163.18,201.23,170.26Z"
-                                    ></path>
-                                </svg>
-                                Metaverse Services
-                            </h5>
+                            <h1 className="mt-3 mb-1 fontWeight-800">
+                                Metaverse Services and Solutions
+                            </h1>
+                            <p className="text-center text-grey-500">
+                                Ready to break the boundaries of reality? Explore these premier <Link to='/' target='_blank'> Metaverse Services & Solutions,</Link> custom-built to guide your business into the next frontier.
+                            </p>
                         </div>
                     </div>
                     <Row className="mb-3">
-                        <Col  lg={4} sm={12} className='mb-3'>
+                        <Col lg={4} sm={12} className='mb-3'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="hstack gap-1">
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon01.png" className="img-fluid Icon-24" alt="" />
-                                        <h5 className="mb-2 fontWeight-500">Metaverse Strategy</h5>
+                                        <h5 className="mb-2 fontWeight-500">Metaverse Consulting</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Creating detailed, impactful strategies to maximize the potential of the Metaverse, aligning with and advancing your business goals.
+                                        Reach your Metaverse goals faster and smarter with Futurristic’s strategic advice, technical know-how, and experience-based problem-solving.
                                     </p>
                                 </div>
                             </div>
                         </Col>
-                        <Col  lg={4} sm={12} className='mb-3'>
+                        <Col lg={4} sm={12} className='mb-3'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="hstack gap-1">
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon02.png" className="img-fluid Icon-24" alt="" />
-                                        <h5 className="mb-2 fontWeight-500">Custom Virtual Environment</h5>
+                                        <h5 className="mb-0">Metaverse Games</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Creating custom virtual environments tailored to your brand's unique style and goals for engaging users.
+                                        Craft captivating world with Futurristic. Design and develop experiences that redefine entertainment & forge lasting connections within the metaverse.
                                     </p>
                                 </div>
                             </div>
                         </Col>
-                        <Col  lg={4} sm={12} className='mb-3'>
-                            <div className="BenefitContentMeta">
-                                <div className="vstack gap-1">
-                                    <div className="hstack gap-1">
-                                        <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon06.png" className="img-fluid Icon-24" alt="" />
-                                        <h5 className="mb-0">Seamless Metaverse Integration</h5>
-                                    </div>
-                                    <p className="text-justify text-grey-500">
-                                        Seamlessly integrating Metaverse solutions with your current digital infrastructure to enhance user experience and functionality.
-                                    </p>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row className="mt-4 mb-3">
-                        <Col  lg={4} sm={12} className='mb-3'>
+                        <Col lg={4} sm={12} className='mb-3'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="hstack gap-1">
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon03.png" className="img-fluid Icon-24" alt="" />
-                                        <h5 className="mb-2 fontWeight-500">Ongoing Support and Maintenance</h5>
+                                        <h5 className="mb-2 fontWeight-500">Metaverse Applications</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Providing continuous technical support and updates to ensure the Metaverse environment remains cutting-edge and efficient.
+                                        Design and develop groundbreaking Metaverse applications with complete customization. Craft experiences that shatter limitations, ignite user engagement, and unlock new realities.
                                     </p>
                                 </div>
                             </div>
                         </Col>
-                        <Col  lg={4} sm={12} className='mb-3'>
+                        <Col lg={4} sm={12} className='mb-3'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="hstack gap-1">
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon04.png" className="img-fluid Icon-24" alt="" />
-                                        <h5 className="mb-2 fontWeight-500">Engaging Content and Asset Development</h5>
+                                        <h5 className="mb-2 fontWeight-500">Simulations, Training, And Digital Twins</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Creating engaging, interactive content and digital assets for use within the Metaverse, enhancing the immersive experience.
+                                        With Futurristic, craft realistic scenarios for workforce development, process optimization, and informed decision-making. Explore and expedite peerless efficiency and innovation.
                                     </p>
                                 </div>
                             </div>
                         </Col>
-                        <Col  lg={4} sm={12} className='mb-3'>
+                        <Col lg={4} sm={12} className='mb-3'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="hstack gap-1">
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon05.png" className="img-fluid Icon-24" alt="" />
-                                        <h5 className="mb-0">UX/UI Design for Metaverse Platforms6</h5>
+                                        <h5 className="mb-0">Metaverse Marketplaces</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Focusing on user-centric design to ensure intuitive navigation and engagement within the Metaverse
+                                        Provide the infrastructure for a thriving virtual economy with Futurristic. Develop custom marketplaces for seamless buying, selling, and interaction within the Metaverse.
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} className='mb-3'>
+                            <div className="BenefitContentMeta">
+                                <div className="vstack gap-1">
+                                    <div className="hstack gap-1">
+                                        <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon06.png" className="img-fluid Icon-24" alt="" />
+                                        <h5 className="mb-0">Metaverse Decentralized Platforms</h5>
+                                    </div>
+                                    <p className="text-justify text-grey-500">
+                                        Design secure, blockchain-enabled platforms for users-owned metaverses with Futurristic. Users govern, manage assets, and collaborate, creating a vibrant decentralized ecosystem..
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} className='mb-3'>
+                            <div className="BenefitContentMeta">
+                                <div className="vstack gap-1">
+                                    <div className="hstack gap-1">
+                                        <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon07.png" className="img-fluid Icon-24" alt="" />
+                                        <h5 className="mb-0">Metaverse Digital Economies (Nft, Blockchain)</h5>
+                                    </div>
+                                    <p className="text-justify text-grey-500">
+                                        Own the virtual economy. Craft NFT & blockchain-powered marketplaces for seamless trading of crypto, NFTs, and digital assets within your Metaverse.
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} className='mb-3'>
+                            <div className="BenefitContentMeta">
+                                <div className="vstack gap-1">
+                                    <div className="hstack gap-1">
+                                        <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon08.png" className="img-fluid Icon-24" alt="" />
+                                        <h5 className="mb-0">Metaverse 2d/3d Art, Avatar Services</h5>
+                                    </div>
+                                    <p className="text-justify text-grey-500">
+                                        Visualize your metaverse. Develop stunning, high-fidelity 2D/3D art, avatars, and assets specifically designed for the metaverse with Futurristic's innovative, expert team.
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} className='mb-3'>
+                            <div className="BenefitContentMeta">
+                                <div className="vstack gap-1">
+                                    <div className="hstack gap-1">
+                                        <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon09.png" className="img-fluid Icon-24" alt="" />
+                                        <h5 className="mb-0">Metaverse Integration Services</h5>
+                                    </div>
+                                    <p className="text-justify text-grey-500">
+                                        Ensure smooth data synchronization, eliminate silos. Connect your existing systems to the metaverse seamlessly, creating a unified and powerful experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} className='mb-3'>
+                            <div className="BenefitContentMeta">
+                                <div className="vstack gap-1">
+                                    <div className="hstack gap-1">
+                                        <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon010.png" className="img-fluid Icon-24" alt="" />
+                                        <h5 className="mb-0">Metaverse For Enterprise</h5>
+                                    </div>
+                                    <p className="text-justify text-grey-500">
+                                        Start collaborating seamlessly. Deliver impactful training and optimize workflows with secure, customizable metaverse solutions for your enterprise.
                                     </p>
                                 </div>
                             </div>

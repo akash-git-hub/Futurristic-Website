@@ -16,7 +16,7 @@ export const Portfolio = () => {
         {
             image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/02-Metaverse.png',
             video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/four.mp4',
-            TumbTitle: 'Buisness Metaverse'
+            TumbTitle: 'Business Metaverse'
         },
         {
             image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-Artgallery.png',
@@ -31,7 +31,7 @@ export const Portfolio = () => {
         {
             image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-EducationMeta.png',
             video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-EducationMeta.mp4',
-            TumbTitle: 'Traning Metaverse'
+            TumbTitle: 'Training Metaverse'
         },
     ]);
 
@@ -54,7 +54,7 @@ export const Portfolio = () => {
     return (
         <>
             <Container>
-                <h1 className="mt-3 mb-3" style={{ textAlign: 'center' }}>
+                <h1 className="mt-3 mb-1 fontWeight-800">
                     Discover Our Dazzling Portfolio
                 </h1>
                 <p>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</p>

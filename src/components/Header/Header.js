@@ -55,7 +55,7 @@ const Header = ({ scrollToRefs }) => {
             <Nav className="ms-auto">
               <Nav.Link href="/" className='text-white navLinkHover fontWeight-800 mx-2'>Home</Nav.Link>
               <Nav.Link onClick={() => scrollToRef(scrollToRefs.aboutUsRef)} className='text-white navLinkHover fontWeight-800 mx-2'>About Us</Nav.Link>
-              <Nav.Link onClick={() => scrollToRef(scrollToRefs.serviceRef)} className='text-white navLinkHover fontWeight-800 mx-2'>Service</Nav.Link>
+              <Nav.Link onClick={() => scrollToRef(scrollToRefs.serviceRef)} className='text-white navLinkHover fontWeight-800 mx-2'>Services</Nav.Link>
               <Nav.Link as={Link} to="https://futurristic.com/fexperience/" target="_blank" className='text-white navLinkHover fontWeight-800 mx-2'>Our Products</Nav.Link>
               <Nav.Link onClick={() => scrollToRef(scrollToRefs.portfolioRef)} className='text-white navLinkHover fontWeight-800 mx-2'>Portfolio</Nav.Link>
               <Button onClick={() => scrollToRef(scrollToRefs.contactUsRef)} type='submit' variant='light' className='GetTouch rounded-5 fontWeight-600 mx-2'>Get In Touch</Button>

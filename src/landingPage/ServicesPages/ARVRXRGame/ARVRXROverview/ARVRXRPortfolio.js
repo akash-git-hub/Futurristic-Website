@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack } from 'react-bootstrap';
-import { FaGamepad } from 'react-icons/fa';
 
 export const ARVRXRPortfolio = () => {
     const [index, setIndex] = useState(0);
     const [isHovered, setIsHovered] = useState([false, false, false, false]);
-    const [modalVideoSrc, setModalVideoSrc] = useState('');
+    const [setModalVideoSrc] = useState('');
 
     const [Games] = useState([
         {
@@ -26,7 +25,7 @@ export const ARVRXRPortfolio = () => {
           {
             image: 'https://futurristic.s3.amazonaws.com/image/video/Game/01-JugarCarGame.png',
             video: 'https://futurristic.s3.amazonaws.com/image/video/Game/JugarCarGame.mp4',
-            TumbTitle: 'Christmas'
+            TumbTitle: 'Road Racer'
           },
           {
             image: 'https://futurristic.s3.amazonaws.com/image/video/Game/01-Gafala01.png',
@@ -60,9 +59,9 @@ export const ARVRXRPortfolio = () => {
     return (
         <>
             <Container>
-                <h5 className="mt-3 mb-3" style={{ textAlign: 'left' }}>
-                    <FaGamepad style={{ fontSize: '2rem' }} /> Our Portfolio
-                </h5>
+                <h1 className="mt-5 mb-1 fontWeight-800" style={{ textAlign: 'center' }}> Discover Our Dazzling Portfolio
+                </h1>
+                <p>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor.</p>
                 <Row xs={1} sm={2} md={4} className="g-4 mb-5 FeatureRowMobile">
                     {Games.map((card, cardIndex) => (
                         <Col key={cardIndex}>

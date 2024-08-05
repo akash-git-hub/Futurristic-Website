@@ -22,7 +22,7 @@ export const ARVRTraning = () => {
       <AboutARVR />
       <ARVRservice />
       <BenefitsARVR />
-      <ARVRTool />
+      {/* <ARVRTool /> */}
       <ARVRPortfolio/>
       <ContactUs />
       <Footer />

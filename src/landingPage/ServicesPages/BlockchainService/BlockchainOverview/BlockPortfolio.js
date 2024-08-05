@@ -44,9 +44,9 @@ export const BlockPortfolio = () => {
     return (
         <>
             <Container>
-                <h5 className="mt-3 mb-3" style={{ textAlign: 'left' }}>
-                    <FaGamepad style={{ fontSize: '2rem' }} /> Our Portfolio
-                </h5>
+                <h1 className="mt-3 mb-1 fontWeight-800" style={{ textAlign: 'center' }}> Discover Our Dazzling Portfolio
+                </h1>
+                <p>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now. </p>
                 <Row xs={1} sm={2} md={4} className="g-4 mb-5 FeatureRowMobile">
                     {Blockchain.map((card, cardIndex) => (
                         <Col key={cardIndex}>

@@ -4,7 +4,7 @@ import { BannerBlock } from './BlockchainOverview/BannerBlock'
 import { AboutBlock } from './BlockchainOverview/AboutBlock'
 import { BlockService } from './BlockchainOverview/BlockService'
 import { BenefitBlock } from './BlockchainOverview/BenefitBlock'
-import { BlockTool } from './BlockchainOverview/BlockTool'
+// import { BlockTool } from './BlockchainOverview/BlockTool'
 import { BlockPortfolio } from './BlockchainOverview/BlockPortfolio'
 import ContactUs from '../../../components/ContactUs/ContactUs'
 import Footer from '../../../components/Footer/Footer'
@@ -22,7 +22,7 @@ export const BlockChain = () => {
       <AboutBlock/>
       <BlockService />
       <BenefitBlock />
-      <BlockTool/>
+      {/* <BlockTool/> */}
       <BlockPortfolio />
       <ContactUs />
       <Footer />

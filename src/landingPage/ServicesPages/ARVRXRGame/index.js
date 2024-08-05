@@ -22,7 +22,7 @@ export const ARVRXRGame = () => {
       <AboutARVRXR />
       <ARVRXRservice />
       <BenefitsARVRXR />
-      <ARVRXRTool />
+      {/* <ARVRXRTool /> */}
       <ARVRXRPortfolio/>
       <ContactUs />
       <Footer />

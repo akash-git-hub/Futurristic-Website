@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack, Tab, Tabs, Modal } from 'react-bootstrap';
-import { FaGamepad } from 'react-icons/fa';
 
 const SectionTwo = () => {
   const [index, setIndex] = useState(0);
@@ -18,7 +17,7 @@ const SectionTwo = () => {
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/02-Metaverse.png',
       video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/four.mp4',
-      TumbTitle: 'Buisness Metaverse'
+      TumbTitle: 'Business Metaverse'
     },
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-Artgallery.png',
@@ -33,7 +32,7 @@ const SectionTwo = () => {
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-EducationMeta.png',
       video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-EducationMeta.mp4',
-      TumbTitle: 'Traning Metaverse'
+      TumbTitle: 'Training Metaverse'
     },
   ]);
 
@@ -103,7 +102,7 @@ const SectionTwo = () => {
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Game/01-JugarCarGame.png',
       video: 'https://futurristic.s3.amazonaws.com/image/video/Game/JugarCarGame.mp4',
-      TumbTitle: 'Christmas'
+      TumbTitle: 'Road Racer'
     },
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Game/01-Gafala01.png',
@@ -137,7 +136,7 @@ const SectionTwo = () => {
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-CarVR.png',
       video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-CarVR.mp4',
-      TumbTitle: 'Traning'
+      TumbTitle: 'Training'
     },
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-PsychologistVR.png',
@@ -207,7 +206,7 @@ const SectionTwo = () => {
     <>
       <div class="FuturristicGame02 mt-5 mb-5">
         <Container>
-          <h1 className="mt-3 mb-3" style={{ textAlign: 'center', fontWeight:'800' }}>
+          <h1 className="mt-3 mb-1 fontWeight-800" style={{ textAlign: 'center', fontWeight:'800' }}>
             Discover Our Dazzling Portfolio
           </h1>
           <h5>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</h5>
@@ -326,7 +325,7 @@ const SectionTwo = () => {
                 ))}
               </Row>
             </Tab>
-            <Tab eventKey="AR/VR Traning" title="AR/VR Traning">
+            <Tab eventKey="AR/VR Training" title="AR/VR Training">
               <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
                 {ARtraning.map((card, cardIndex) => (
                   <Col key={cardIndex}>

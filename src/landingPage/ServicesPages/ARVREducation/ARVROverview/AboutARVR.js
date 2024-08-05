@@ -11,8 +11,8 @@ export const AboutARVR = () => {
                             <Col md={8} sm={12}>
                                 <div className="AboutUsText">
                                     <div className="text-left vstack gap-3">
-                                        <h1 className="text-center fontWeight-800">Turn your idea's into reality and create and trainng and education based platform in AR/VR Domain.</h1>
-                                        <h4 className="text-center">we can help you make it a reality in no time.</h4>
+                                        <h1 className="text-center fontWeight-800">Transform Training & Engagement with Custom AR/VR Solutions</h1>
+                                        {/* <h4 className="text-center">we can help you make it a reality in no time.</h4> */}
                                         <p className="text-center fontSize-24 fontWeight-500" style={{ color: 'rgb(134, 134, 139)' }}>
                                             "Seeking innovative ideas to train and engage with your customer. Our experienced team is ready to create an AR/VR experience which will transform training and education by providing immersive, interactive, and impactful learning experiences across various domains and industries."
                                         </p>

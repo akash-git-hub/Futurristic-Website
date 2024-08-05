@@ -235,7 +235,7 @@ const SectionTwo = () => {
       likeText: '1k',
       gameDevText: 'MetaVerse Developer',
       gameStudioText: 'By FUTURRSTIC',
-      TumbTitle:'Buisness Metaverse'
+      TumbTitle:'Business Metaverse'
     },
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-ArtGallery.png',

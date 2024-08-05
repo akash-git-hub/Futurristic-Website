@@ -83,7 +83,7 @@ const ContactUs = () => {
                                 <div className="FormHeading text-left ">
                                     {/* <h3 className='fontWeight-800'>Contact Info</h3> */}
                                 </div>
-                                <img src="https://futurristic.s3.amazonaws.com/image/video/ContactUs.png" className="img-fluid w-100" alt="" />
+                                <img src="https://futurristic.s3.amazonaws.com/image/video/ContactUs.png" className="img-fluid w-100 rounded" alt="" />
                             </Col>
                         </Row>
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const MobileAppservice = () => {
     return (
@@ -8,23 +9,10 @@ export const MobileAppservice = () => {
                 <Container>
                     <div className="justify-content-center mb-4 row">
                         <div className="text-center col">
-                            <h5 className="mt-3 mb-3" style={{ textAlign: 'left' }}>
-                                <svg
-                                    stroke="currentColor"
-                                    fill="currentColor"
-                                    strokeWidth="0"
-                                    viewBox="0 0 256 256"
-                                    height="1em"
-                                    width="1em"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style={{ fontSize: '2rem' }}
-                                >
-                                    <path
-                                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm73.23,146.26c-5.63,9-14.33,13.74-25.16,13.74-20.73,0-34.81-25.31-49.72-52.11C115.47,112.33,101.93,88,90.61,88,78.18,88,64,116.88,64,142.21c0,8.26,1.5,15,4.34,19.56C71,166,74.68,168,79.93,168c6.08,0,13.52-7,22.74-21.51a8,8,0,0,1,13.49,8.59C99.84,180.71,88.22,184,79.93,184c-10.83,0-19.53-4.75-25.16-13.74-4.43-7.08-6.77-16.78-6.77-28A103.13,103.13,0,0,1,59,97.06C67.34,80.9,78.57,72,90.61,72c20.73,0,34.81,25.31,49.72,52.11C151.21,143.66,164.75,168,176.07,168c5.25,0,8.93-2,11.59-6.23,2.84-4.53,4.34-11.3,4.34-19.56C192,116.88,177.82,88,165.39,88c-3.4,0-7.35,2.31-11.74,6.88a8,8,0,1,1-11.54-11.09C149.74,75.86,157.35,72,165.39,72c12,0,23.27,8.9,31.62,25.06a103.13,103.13,0,0,1,11,45.15C208,153.48,205.66,163.18,201.23,170.26Z"
-                                    ></path>
-                                </svg>
-                                Metaverse Services
-                            </h5>
+                            <h1 className="mt-3 mb-1 fontWeight-800" style={{ textAlign: 'center' }}>
+                                Mobile, Web & Enterprise Development Services
+                            </h1>
+                            <p>Dive into the various mobile web & enterprise development services and get started with the perfect, ideal solutions your business needs. </p>
                         </div>
                     </div>
                     <Row className="mb-3">
@@ -37,12 +25,12 @@ export const MobileAppservice = () => {
                                             className="img-fluid serviceIcon"
                                             alt=""
                                         />
-                                        <h5 className="mb-2 text-justify fontWeight-500">
-                                            Interactive Campaign Creation
+                                        <h5 className="mb-2 fontWeight-500">
+                                            Consultation & Strategy
                                         </h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Designing and implementing interactive AR marketing campaigns that captivate audiences and create memorable brand experiences.
+                                        Take expert guidance from Futurristic’s adepts in <Link to="/">mobile web & enterprise development services</Link> with years of expertise & experience. Consult regarding mobile web & enterprise dev-solution, enterprise mobility solutions, and data migration & integration.
                                     </p>
                                 </div>
                             </div>
@@ -56,10 +44,10 @@ export const MobileAppservice = () => {
                                             className="img-fluid serviceIcon"
                                             alt=""
                                         />
-                                        <h5 className="mb-2 text-justify fontWeight-500">Custom AR Development</h5>
+                                        <h5 className="mb-2 fontWeight-500">Development & Design</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Crafting unique AR content tailored to your brand's message, enhancing customer engagement and brand recall.
+                                        Build your custom mobile app with Futurristic, encompassing enterprise web application development, responsive web design, cross-platform mobile development, and progressive web app (PWA) solutions to meet all your business needs.
                                     </p>
                                 </div>
                             </div>
@@ -73,16 +61,14 @@ export const MobileAppservice = () => {
                                             className="img-fluid serviceIcon"
                                             alt=""
                                         />
-                                        <h5 className="mb-2 text-justify fontWeight-500">Augmented Reality Advertising</h5>
+                                        <h5 className="mb-2 fontWeight-500">Integration & Backend Services</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Leveraging AR technology to create innovative advertisements that stand out in a crowded digital space.
+                                        From Backend & API Development to Cloud Integration Services and Enterprise System Integration, make your business model/platform competitive with such integrations. Add advanced features and functionalities with ease and efficiency.
                                     </p>
                                 </div>
                             </div>
                         </Col>
-                    </Row>
-                    <Row className="mt-4 mb-3">
                         <Col lg={4} sm={12} className='mb-3'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
@@ -92,10 +78,10 @@ export const MobileAppservice = () => {
                                             className="img-fluid serviceIcon"
                                             alt=""
                                         />
-                                        <h5 className="mb-2 text-justify fontWeight-500">Social Media AR Integration</h5>
+                                        <h5 className="mb-2 fontWeight-500">User Experience & Interface</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Integrating AR features into social media platforms, making your marketing campaigns more interactive and shareable
+                                        Design your mobile, web, or entrepreneurial platform with intuitive navigation, compelling, and responsive design. Ensure quick load times, usability by following WCAG guidelines, scalability, and seamless user interaction altogether
                                     </p>
                                 </div>
                             </div>
@@ -109,10 +95,10 @@ export const MobileAppservice = () => {
                                             className="img-fluid serviceIcon"
                                             alt=""
                                         />
-                                        <h5 className="mb-2 text-justify fontWeight-500">Analytics and Performance Tracking</h5>
+                                        <h5 className="mb-2 fontWeight-500">Testing, Maintenance, & Security</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Providing detailed analytics on customer engagement and campaign performance, enabling data-driven marketing decisions.
+                                        Ensure robust performance complete, Mobile application testing & QA, Application maintenance & support, Mobile security solutions, and Performance optimization services for seamless, secure, and scalable operation.
                                     </p>
                                 </div>
                             </div>
@@ -126,10 +112,10 @@ export const MobileAppservice = () => {
                                             className="img-fluid serviceIcon"
                                             alt=""
                                         />
-                                        <h5 className="mb-2 text-justify fontWeight-500">Technical Support and Training</h5>
+                                        <h5 className="mb-2 fontWeight-500">Advanced Solutions & Support</h5>
                                     </div>
                                     <p className="text-justify text-grey-500">
-                                        Offering comprehensive technical support and training sessions to ensure smooth deployment and utilization of AR technology in marketing efforts.
+                                        Get advanced solutions & support to strengthen your business. Services include E-commerce development, Business Intelligence & Analytics Solutions, DevOps & Continuous Integration/Continuous Deployment (CI/CD), and AR/VR integration.
                                     </p>
                                 </div>
                             </div>

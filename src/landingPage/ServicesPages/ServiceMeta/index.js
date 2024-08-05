@@ -22,7 +22,7 @@ export const MetaServices = () => {
       <AboutMeta />
       <ServiceMeta />
       <BenefitMeta />
-      <MetaTool />
+      {/* <MetaTool /> */}
       <Portfolio />
       <ContactUs />
       <Footer />
