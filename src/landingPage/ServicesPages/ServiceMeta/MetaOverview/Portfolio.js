@@ -57,7 +57,7 @@ export const Portfolio = () => {
                 <h1 className="mt-3 mb-1 fontWeight-800">
                     Discover Our Dazzling Portfolio
                 </h1>
-                <p>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</p>
+                <p className='text-center text-grey-500 fontSize-20 mb-3'>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</p>
                 <Row xs={1} sm={2} md={4} className="g-4 mb-5 FeatureRowMobile">
                     {cardContent.map((card, cardIndex) => (
                         <Col key={cardIndex}>
@@ -83,8 +83,8 @@ export const Portfolio = () => {
                                     <Card.Img variant="top" src={card.image} />
                                 )}
                                 <Card.Body
-                                    className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
-                                        }`}
+                                    // className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                                    //     }`}
                                 >
                                     <Stack direction="vertical" gap={0}>
                                         <h5 className="text-left mb-3">{card.TumbTitle}</h5>

@@ -52,14 +52,14 @@ function App() {
   
   const ARVRTraningWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Interactive AR/VR/XR Game Development" description="Get your first or upgrade existing game with the AR/VR/XR game development services & solutions. Transform player experiences today with us." />
+      <RouteSpecificMeta title="AR VR Training & Educational Platform" description="Give your AR/VR training & educational platform a boost by offering an immersive experience to your learners. Get enhanced educational outcomes. " />
       <ARVRTraning />
     </>
   );
   
   const ARVRXRGameWithMeta = () => (
     <>
-      <RouteSpecificMeta title="AR VR Training & Educational Platform" description="Give your AR/VR training & educational platform a boost by offering an immersive experience to your learners. Get enhanced educational outcomes." />
+      <RouteSpecificMeta title="Interactive AR/VR/XR Game Development" description="Get your first or upgrade existing game with the AR/VR/XR game development services & solutions. Transform player experiences today with us." />
       <ARVRXRGame />
     </>
   );
@@ -95,8 +95,8 @@ function App() {
           <Route path="/ar-vr-training-&-educational-platform" element={<ARVRTraningWithMeta />} />
           <Route path="/interactive-ar-vr-xr-game-development" element={<ARVRXRGameWithMeta />} />
           <Route path="/mobile-web-&-enterprise-development" element={<MobileAppWithMeta />} />
-          <Route path="/privacypolicy" element={<PrivacyPolicyWithMeta />} />
-          <Route path="/termandcondition" element={<TermConditionWithMeta />} />
+          <Route path="/privac&ypolicy" element={<PrivacyPolicyWithMeta />} />
+          <Route path="/termsandconditions" element={<TermConditionWithMeta />} />
         </Routes>
       </BrowserRouter>
     </div>

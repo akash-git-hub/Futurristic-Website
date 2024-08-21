@@ -54,10 +54,22 @@ export const PortfolioAR = () => {
     return (
         <>
             <Container>
-                <h5 className="mt-3 mb-3" style={{ textAlign: 'left' }}>
-                    <FaGamepad style={{ fontSize: '2rem' }} /> Our Portfolio
-                </h5>
-                <Row xs={1} sm={2} md={4} className="g-4 mb-5 FeatureRowMobile">
+
+            <Row className='mt-5'>
+            <div className="justify-content-center mb-4 row">
+                 <div className="text-center col">
+                      <h1 className="mt-3 mb-1 fontWeight-800">
+                      Discover Our Dazzling Portfolio 
+                        </h1>
+                        <p className="text-center text-grey-500 fontSize-20">
+                        Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now. 
+                        </p>
+                 </div>
+            </div>
+            </Row>
+
+             <Row xs={1} sm={2} md={4} className="g-4 mb-5 FeatureRowMobile"> 
+            
                     {ARVRMRContent.map((card, cardIndex) => (
                         <Col key={cardIndex}>
                             <Card
@@ -86,7 +98,7 @@ export const PortfolioAR = () => {
                                         }`}
                                 >
                                     <Stack direction="vertical" gap={0}>
-                                        <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                                        <h5 className="text-center mb-3">{card.TumbTitle}</h5>
                                     </Stack>
                                 </Card.Body>
                             </Card>

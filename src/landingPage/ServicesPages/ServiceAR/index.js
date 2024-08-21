@@ -21,7 +21,7 @@ export const WebARServices = () => {
       <AboutAR />
       <ServiceAR />
       <BenefitAR />
-      <ARTool />
+      {/* <ARTool /> */}
       <PortfolioAR />
       <ContactUs />
       <Footer />

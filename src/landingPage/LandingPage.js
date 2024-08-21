@@ -26,11 +26,12 @@ const LandingPage = () => {
       <Header scrollToRefs={scrollToRefs} />
       <MainSlider />
       <div ref={aboutUsRef}>
-        <AboutUs />
+        <AboutUs scrollToRefs={scrollToRefs}/>
       </div>
       <div ref={serviceRef}>
         <Service />
       </div>
+      <div ref={portfolioRef}></div>
       <SectionTwo />
       <OwnerDetails />
       {/* <HowWeDoIt/> */}
@@ -38,6 +39,9 @@ const LandingPage = () => {
       <div ref={contactUsRef}>
         <ContactUs />
       </div>
+
+    
+
       <Footer />
     </div>
   );

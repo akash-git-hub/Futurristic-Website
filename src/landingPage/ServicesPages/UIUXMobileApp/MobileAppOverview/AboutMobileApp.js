@@ -12,10 +12,10 @@ export const AboutMobileApp = () => {
                             <Col md={8} sm={12}>
                                 <div className="AboutUsText">
                                     <div className="text-left vstack gap-3">
-                                        <h1 className="text-center fontWeight-800">Mobile Apps, Website, and Enterprise Solution at Your Fingertips</h1>
-                                        <h4 className="text-center">we can help you make it a reality in no time.</h4>
-                                        <p className="text-center fontSize-24 fontWeight-500" style={{ color: 'rgb(134, 134, 139)' }}>
-                                            We specialize in developing high-quality, user-friendly mobile and web applications for iOS and Android platforms. Our team leverages the latest technologies and frameworks for <Link to='/' target='_blank'>custom mobile applications development</Link>, tailored to meet the specific needs and requirements of our clients.
+                                        <h1 className="text-center fontWeight-800">Dealing with Unresponsive App, Website, Enterprise Platform?                                        </h1>
+                                        <h4 className="text-center">Get Mobile Apps, Website, & Enterprise Solution at Your Fingertips</h4>
+                                        <p className="text-center fontSize-24 fontWeight-500 " style={{ color: 'rgb(134, 134, 139)' }}>
+                                        Having a sluggish app/website/enterprise platform may stifle business growth, frustrate your users, and undermine efficiency. Optimizing digital touchpoints like mobile, web, or enterprise ensure seamless performance and opens up new opportunities for innovation. And to get an edge over your competitors, integrating cryptocurrency by leveraging <Link to='/blockchain-integration-and-solutions' target="_blank">custom blockchain integration</Link> services from us.
                                         </p>
                                     </div>
                                 </div>

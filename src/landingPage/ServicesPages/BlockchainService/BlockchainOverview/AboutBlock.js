@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const AboutBlock = () => {
     return (
@@ -11,10 +12,10 @@ export const AboutBlock = () => {
                             <Col md={8} sm={12}>
                                 <div className="AboutUsText">
                                     <div className="text-left vstack gap-3">
-                                        <h1 className="text-center fontWeight-800">Create Your Own Cryptocurrency Platform.</h1>
-                                        <h4 className="text-center">we can help you make it a reality in no time.</h4>
-                                        <p className="text-center fontSize-24 fontWeight-500" style={{ color: 'rgb(134, 134, 139)' }}>
-                                        "We have an experienced team working on custom blockchain solution, Smart contract, Cryptocurrency, Wallet and DeFi Solutions. We believed in the potential of cryptocurrency and are excited to continue pushing forward the state of the art through encryption, leading key generation, and network participation."
+                                        <h1 className="text-center fontWeight-800">Still Paying Traditional Fees? Time to Build Your Own Cryptocurrency Platform!</h1>
+                                        <h4 className="text-center">Create Your Own Cryptocurrency Platform</h4>
+                                        <p className="text-center fontSize-24 fontWeight-500 " style={{ color: 'rgb(134, 134, 139)' }}>
+                                        Why stick to conventional methods when you can have your own crypto platform? Futurristic’s seasoned team provides custom blockchain solutions, smart contracts, cryptocurrency development, wallets, and DeFi solutions.By pushing the boundaries of encryption, key generation, and network participation to leapfrog the crypto game and its competition. Why stop at cryptocurrency? Leverage <Link t ='/metaverse-end-to-end-solutions' target='_blank'>Metaverse services & solutions</Link> and blockchain integration together to tackle today's challenges and redefine tomorrow’s standards.
                                         </p>
                                     </div>
                                 </div>

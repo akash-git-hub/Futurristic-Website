@@ -10,6 +10,7 @@ const Header = ({ scrollToRefs }) => {
   const [isSticky, setSticky] = useState(false);
 
   const scrollToRef = (ref) => {
+    console.log(ref);
     if (ref && ref.current) {
       console.log('Scrolling to:', ref.current);  // Debugging output
       ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });

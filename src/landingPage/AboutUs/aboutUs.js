@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Stack, Button } from 'react-bootstrap';
 
-const AboutUs = ({scrollToRefs}) => {
+const AboutUs = ({scrollToRefs}) => 
+    
+    {
     const scrollToRef = (ref) => {
         if (ref && ref.current) {
           console.log('Scrolling to:', ref.current);  // Debugging output
@@ -10,9 +12,15 @@ const AboutUs = ({scrollToRefs}) => {
           console.error('Reference is not defined or current is null:', ref);  // Debugging output
         }
       };
+      console.log(scrollToRefs);
+
+      const handleContactClick = () => {
+        scrollToRef(scrollToRefs.contactUsRef); // Scroll to contactUsRef
+    };
 
     return (
         <>
+          
             <div className='AboutUs_Section mb-5 py-5' style={{
                 background: '#EBF5FF'
             }}>
@@ -45,7 +53,7 @@ const AboutUs = ({scrollToRefs}) => {
                                     <Stack className="text-center px-md-0" direction='vertical' gap={2}>
                                         <h5>Futurristic empowers businesses to bridge the gap between vision and experience. We redefine possibilities through Augmented Reality, Virtual Reality, Mixed Reality experiences, Metaverse, Game Development and more to craft groundbreaking solutions that redefine customer engagement, employee training, and product visualization. </h5>
                                         <h5>Our team of passionate experts collaborates with you to translate your vision into multidimensional realities, drive innovation and propelling your brand to the forefront.</h5>
-                                        {/* <Button onClick={() => scrollToRef(scrollToRefs.contactUsRef)} className='rounded-5 mt-4 ContactBtn mobile-100' variant='dark' type='submit'>Let's get started</Button> */}
+                                         <Button onClick={handleContactClick} className='rounded-5 mt-4 ContactBtn mobile-100' variant='dark' type='submit'>Let's get started</Button> 
                                     </Stack>
                                 </div>
                             </Col>
