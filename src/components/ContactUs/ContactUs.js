@@ -4,55 +4,58 @@ import { HiLocationMarker } from "react-icons/hi";
 import { BiLogoGmail, BiSolidPhoneCall } from "react-icons/bi";
 import { BsMailbox2 } from "react-icons/bs";
 import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { submitContactUsForm } from "../../services/NetworkCall"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
  
 const ContactUs = () => {
     const [validated, setValidated] = useState(false);
-    const [formdata,setformdata] = useState([]);
-    const email=useRef();
-    const mobile=useRef();
-    const message = useRef();
+    const [formData, setFormData] = useState({ "email": "", "phoneNumber": "", "message": "" });
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
+
         const form = event.currentTarget;
-        if (form.checkValidity() === false) {
+
+        if (form.checkValidity() == false) {
             event.stopPropagation();
-        }else{
             setValidated(true);
-            const em = email.current.value;
-            const mb = mobile.current.value;
-            const msg = message.current.value;
-            const obj = { email: em, mobile: mb, message: msg}
-            setformdata((prevFormData) => [...prevFormData, obj]);
-            setValidated(true); 
-            console.log([...formdata,obj]);
-            alertSuccess();
-           clear(); 
+            return; // Exit the function early if the form is invalid
         }
+
+        setValidated(true);
+
+        setLoading(true);
+        // call the apis
+        if (form.checkValidity() == true) {
+            const res = await submitContactUsForm(formData);
+            if (res.success) {
+                toast.success(res.message);
+                setValidated(false);
+                form.reset(); // Use 'form' instead of 'event.target' for clarity
+                setLoading(false);
+                return;
+            }
+            else {
+                toast.error(res.message);
+            }
+            setLoading(false);
+        }
+        setLoading(false)
     };
 
-    const clear = () => {
-        email.current.value = "";
-        mobile.current.value = "";
-        message.current.value = "";
+    const inputHandler = (e) => {
+        const { name, value } = e.target;
+        setFormData((pre) => ({ ...pre, [name]: value }));
     }
-
-    const alertSuccess = () =>{
-        Swal.fire({
-           title:'Thank You! ',
-           text: "You have nailed it! We are diving into your information and will be in touch soon!",
-           icon: 'success',
-           confirmButtonText: 'OK'
-        });
-       }
-
-     
-
 
     return (
         <>
+            <ToastContainer />
             <div className="ContactMainContainer">
                 <Container>
                     <div className="FormContent">
@@ -65,53 +68,56 @@ const ContactUs = () => {
 
                                 <div className="ContactInfo">
                                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                                        <Row>
-                                            <Col md={12} className='mb-3'>
-                                                <Form.Label>Enter Email</Form.Label>                                              
-                                                    <Form.Control
-                                                        required
-                                                        placeholder="Email address"
-                                                        ref={email}
-                                                        id='email'
-                                                    /> 
-                                                    <Form.Control.Feedback type="invalid" >Please enter  a valid email.</Form.Control.Feedback>                                                
-                                            </Col>
-
-                                            <Col md={12} className='mb-3'>
-                                                <Form.Label>Enter Number</Form.Label>                                              
-                                                    <Form.Control
-                                                        required
-                                                        id='number'
-                                                        ref={mobile}
-                                                        placeholder="Mobile number"
-                                                         type="number"
-                                                    /> 
-                                                     <Form.Control.Feedback type="invalid">Please enter  a valid mobile number.</Form.Control.Feedback>                                                
-                                            </Col>
-
-                                            <Col md={12} className='mb-3'>
-                                                <Form.Label>Enter Your Message</Form.Label>                                              
-                                                    <Form.Control
+                                        <Row className="mb-3">
+                                            <Form.Group className="mt-3" as={Col} md="12" controlId="validationCustom03">
+                                                <Form.Label>Enter Email</Form.Label>
+                                                <Form.Control type="email" placeholder="Email address" required name="email" onChange={inputHandler} />
+                                                {/* <small style={{ color: "red", textAlign: "left" }}> {error.email}</small> */}
+                                                <Form.Control.Feedback type="invalid" className='text-left'>
+                                                    Please enter a valid email.
+                                                </Form.Control.Feedback>
+                                            </Form.Group>
+                                            <Form.Group className="mt-3" as={Col} md="12" controlId="validationCustom04">
+                                                <Form.Label>Enter Your Number</Form.Label>
+                                                <Form.Control type="text" maxLength={12} placeholder="Mobile number" required name='phoneNumber' onChange={inputHandler} />
+                                                {/* <small style={{ color: "red", textAlign: "left" }}> {error.phoneNumber}</small> */}
+                                                <Form.Control.Feedback type="invalid" className='text-left'>
+                                                    Please enter a valid mobile number.
+                                                </Form.Control.Feedback>
+                                            </Form.Group>
+                                            <Form.Group className="mt-3" as={Col} md="12" controlId="validationCustom05">
+                                                <Form.Label>Enter Your Message</Form.Label>
+                                                <Form.Control as="textarea" rows={3} placeholder="Your message" required name='message' onChange={inputHandler} />
+                                                {/* <small style={{ color: "red", textAlign: "left" }}> {error.message}</small> */}
+                                                <Form.Control.Feedback type="invalid" className='text-left'>
+                                                    Please enter a message.
+                                                </Form.Control.Feedback>
+                                            </Form.Group>
+                                            <Form.Group className="mt-3" as={Col} md="12" controlId="1">
+                                                <Form.Check
+                                                    type="checkbox"
                                                     required
-                                                        placeholder="Enter message"
-                                                        as='textarea'
-                                                        id='message'
-                                                        ref={message}
-                                                        style={{height:'100px'}}
-                                                    />     
-                                                     <Form.Control.Feedback type="invalid">Please enter message.</Form.Control.Feedback>                                            
-                                            </Col>
+                                                    name='agree'
+                                                    id='1'
+                                                    feedback="You must agree before submitting."
+                                                    feedbackType="invalid"
+                                                    label={
+                                                        <>
+                                                            I agree to the{' '}
+                                                            <a href="/termandcondition" target="_blank" rel="noopener noreferrer" style={{
+                                                                textDecoration: 'none'
+                                                            }}>terms & conditions</a>
+                                                            {' '}and{' '}
+                                                            <a href="/privacypolicy" target="_blank" rel="noopener noreferrer" style={{
+                                                                textDecoration: 'none'
+                                                            }}>privacy policy</a>.
+                                                        </>
+                                                    }
+                                                />
+                                                {/* <small style={{ color: "red", textAlign: "left" }}> {error.agree}</small> */}
+                                            </Form.Group>
                                         </Row>
-
-                                        <Form.Group className="mb-3">
-                                            <Form.Check type='checkbox' id='contact-check' >
-                                                <Form.Check.Input type='checkbox' required />
-                                                <Form.Check.Label className='text-dark'>I agree to <Link to='https://futurristic.com/termsandconditions' style={{ textDecoration: "none" }}>Terms and Conditions</Link> and <Link to='https://futurristic.com/privacypolicy' style={{ textDecoration: "none" }}>Privacy Policy .</Link></Form.Check.Label>
-                                                <Form.Control.Feedback type="invalid"> You must agree before submitting.</Form.Control.Feedback>
-                                            </Form.Check>
-                                        </Form.Group>
-
-                                        <Button type="submit" variant='primary' className='ContactBtn rounded-5'>Submit form</Button>
+                                        <Button type="submit" variant="dark" className="ContactBtn rounded-5" disabled={loading}>Submit</Button>
                                     </Form>
                                 </div>
                             </Col> 
