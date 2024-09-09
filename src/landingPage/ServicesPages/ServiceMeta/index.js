@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect , useRef} from 'react'
 import { Banner } from './MetaOverview/Banner'
 import { AboutMeta } from './MetaOverview/AboutMeta'
 import { ServiceMeta } from './MetaOverview/Service'
@@ -8,24 +8,38 @@ import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import ContactUs from '../../../components/ContactUs/ContactUs'
 import { Portfolio } from './MetaOverview/Portfolio'
+import ServiceHeader from '../../../components/Header/ServiceHeader'
 
 export const MetaServices = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+ 
+  const portfolioRef = useRef(null);
+  const contactUsRef = useRef(null);
 
+  const scrollToRefs = {
+    portfolioRef,
+    contactUsRef,
+  };
 
   return (
     <>
-      <Header />
+      <div>
+      <ServiceHeader scrollToRefs={scrollToRefs}/>
       <Banner />
       <AboutMeta />
       <ServiceMeta />
       <BenefitMeta />
       {/* <MetaTool /> */}
+      <div ref={portfolioRef}>
       <Portfolio />
+      </div>
+    
+      <div ref={contactUsRef}>
       <ContactUs />
-      <Footer />
+      </div>
+      
+      <Footer scrollToRefs={scrollToRefs}/>
+      </div>
     </>
   )
 }
+ 

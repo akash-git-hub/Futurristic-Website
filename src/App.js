@@ -45,7 +45,7 @@ function App() {
   
   const BlockChainWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Blockchain Integration and Solutions " description="Have your business benefit from expert Blockchain integration and solutions, ensuring streamlined operations and enhanced security measures." />
+      <RouteSpecificMeta title="Blockchain Integration and Solutions  | Blockchain Integration and Development Services" description="Have your business benefit from expert Blockchain integration and solutions, ensuring streamlined operations and enhanced security measures." />
       <BlockChain />
     </>
   );
@@ -95,7 +95,7 @@ function App() {
           <Route path="/ar-vr-training-&-educational-platform" element={<ARVRTraningWithMeta />} />
           <Route path="/interactive-ar-vr-xr-game-development" element={<ARVRXRGameWithMeta />} />
           <Route path="/mobile-web-&-enterprise-development" element={<MobileAppWithMeta />} />
-          <Route path="/privac&ypolicy" element={<PrivacyPolicyWithMeta />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicyWithMeta />} />
           <Route path="/termsandconditions" element={<TermConditionWithMeta />} />
         </Routes>
       </BrowserRouter>

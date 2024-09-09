@@ -14,8 +14,8 @@ export const BenefitsARVR = () => {
             <Container>
                 <Row className="justify-content-center my-4">
                     <Col className="text-center">
-                        <h1 className="mt-3 mb-3">
-                            Let's Dive into AR VR Training & Educational Platform Wonders
+                        <h1 className="mt-3 mb-3 fontWeight-800">
+                              Here are the Potential Benefits of AR VR Training & Educational Platform
                         </h1>
                         <p className="text-center text-grey-500 fontSize-20 ">
                         Explore how AR VR Training & Educational Platform makes education interesting and exciting.</p>

@@ -102,8 +102,7 @@ export const ServiceMeta = () => {
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon07.png" className="img-fluid Icon-24" alt="" />
-                                        </div>     <h5 className="mb-2 text-justify fontWeight-800 text-center">Metaverse Digital Economies (Nft, Blockchain)</h5>
-                                   
+                                        </div>     <h5 className="mb-2 text-justify fontWeight-800 text-center">Metaverse Digital Economies (NFT, Blockchain)</h5>
                                     <p className=" p-3 text-justify text-grey-500">
                                     Own the virtual economy. Craft NFT & blockchain-powered marketplaces for seamless trading of crypto, NFTs, and digital assets within your Metaverse.
                                     </p>
@@ -116,8 +115,7 @@ export const ServiceMeta = () => {
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon08.png" className="img-fluid Icon-24" alt="" />
-                                        </div>    <h5 className=" mb-2 text-justify fontWeight-800 text-center">Metaverse 2d/3d Art, Avatar Services</h5>
-                                   
+                                        </div>    <h5 className=" mb-2 text-justify fontWeight-800 text-center">Metaverse 2D/3D Art, Avatar Services</h5>
                                     <p className=" p-3 text-justify text-grey-500">
                                     Visualize your metaverse. Develop stunning, high-fidelity 2D/3D art, avatars, and assets specifically designed for the metaverse with Futurristic's innovative, expert team. 
                                     </p>

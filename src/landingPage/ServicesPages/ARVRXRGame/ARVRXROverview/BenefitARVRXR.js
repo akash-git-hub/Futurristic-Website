@@ -15,7 +15,7 @@ export const BenefitsARVRXR = () => {
                 <Row className="justify-content-center my-5">
                     <Col className="text-center">
                         <h1 className="mt-3 mb-1 fontWeight-800">
-                            Let's Dive into Interactive AR/VR/XR Game Development Wonders
+                            Here are the Potential Benefits of Interactive AR/VR/XR Game Development
                         </h1>
                     </Col>
                 </Row>

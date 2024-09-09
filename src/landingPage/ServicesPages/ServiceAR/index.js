@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react'
 import { BannerAR } from './AROverview/BannerAR'
 import { AboutAR } from './AROverview/AboutAR'
 import { BenefitAR } from './AROverview/BenefitAR'
@@ -8,23 +8,30 @@ import { PortfolioAR } from './AROverview/PortfolioAR'
 import ContactUs from '../../../components/ContactUs/ContactUs'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
+import ServiceHeader from '../../../components/Header/ServiceHeader'
 
 
 export const WebARServices = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+ 
+  const portfolioRef = useRef(null);
+  const contactUsRef = useRef(null);
+
+  const scrollToRefs = {
+    portfolioRef,
+    contactUsRef,
+  };
+
   return (
     <>
-      <Header />
+      <ServiceHeader scrollToRefs={scrollToRefs} />
       <BannerAR />
       <AboutAR />
       <ServiceAR />
       <BenefitAR />
       {/* <ARTool /> */}
-      <PortfolioAR />
-      <ContactUs />
-      <Footer />
+      <div ref={portfolioRef}> <PortfolioAR /></div> 
+      <div ref={contactUsRef}><ContactUs /></div>
+      <Footer scrollToRefs={scrollToRefs}/>
     </>
   )
 }

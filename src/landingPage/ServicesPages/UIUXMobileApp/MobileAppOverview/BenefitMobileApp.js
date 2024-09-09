@@ -16,7 +16,7 @@ export const BenefitsMobileApp = () => {
                 <Row className="justify-content-center mb-4">
                     <Col className="text-center">
                         <h1 className="mt-3 mb-3 fontWeight-800" style={{ textAlign: 'center' }}>
-                            Let's Dive into Mobile, Web & Enterprise Development Wonders
+                        Here are the Potential Benefits of Mobile, Web & Enterprise Development 
                         </h1>
                         <p className="text-center text-grey-500 fontSize-20">Turn your tech headaches into seamless solutions and see what benefits you will get.
                         </p>

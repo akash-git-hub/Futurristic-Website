@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack } from 'react-bootstrap';
 import { FaGamepad } from 'react-icons/fa';
 
+
 export const Portfolio = () => {
     const [index, setIndex] = useState(0);
     const [isHovered, setIsHovered] = useState([false, false, false, false]);
@@ -59,6 +60,7 @@ export const Portfolio = () => {
                 </h1>
                 <p className='text-center text-grey-500 fontSize-20 mb-3'>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</p>
                 <Row xs={1} sm={2} md={4} className="g-4 mb-5 FeatureRowMobile">
+                <div data-slick='{"slideToShow": 4, "slidesToScroll": 4}' >
                     {cardContent.map((card, cardIndex) => (
                         <Col key={cardIndex}>
                             <Card
@@ -93,6 +95,7 @@ export const Portfolio = () => {
                             </Card>
                         </Col>
                     ))}
+                </div>
                 </Row>
             </Container>
         </>

@@ -106,7 +106,7 @@ const ContactUs = () => {
                                         <Form.Group className="mb-3">
                                             <Form.Check type='checkbox' id='contact-check' >
                                                 <Form.Check.Input type='checkbox' required />
-                                                <Form.Check.Label className='text-dark'>I agree to <Link to='https://futurristic.com/termandcondition' style={{ textDecoration: "none" }}>Terms and Conditions</Link> and <Link to='https://futurristic.com/privacypolicy' style={{ textDecoration: "none" }}>Privacy Policy .</Link></Form.Check.Label>
+                                                <Form.Check.Label className='text-dark'>I agree to <Link to='https://futurristic.com/termsandconditions' style={{ textDecoration: "none" }}>Terms and Conditions</Link> and <Link to='https://futurristic.com/privacypolicy' style={{ textDecoration: "none" }}>Privacy Policy .</Link></Form.Check.Label>
                                                 <Form.Control.Feedback type="invalid"> You must agree before submitting.</Form.Control.Feedback>
                                             </Form.Check>
                                         </Form.Group>

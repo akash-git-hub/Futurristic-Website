@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react'
 import Header from '../../../components/Header/Header'
 import { ARVRXRBanner } from './ARVRXROverview/BannerARVRXR'
 import { AboutARVRXR } from './ARVRXROverview/AboutARVRXR'
@@ -8,24 +8,27 @@ import { ARVRXRTool } from './ARVRXROverview/ARVRXRTool'
 import { ARVRXRPortfolio } from './ARVRXROverview/ARVRXRPortfolio'
 import ContactUs from '../../../components/ContactUs/ContactUs'
 import Footer from '../../../components/Footer/Footer'
+import ServiceHeader from '../../../components/Header/ServiceHeader'
 
 export const ARVRXRGame = () => {
+  const portfolioRef = useRef(null);
+  const contactUsRef = useRef(null);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+  const scrollToRefs = {
+    portfolioRef,
+    contactUsRef,
+  };
   return (
     <>
-      <Header />
+      <ServiceHeader scrollToRefs={scrollToRefs}/>
       <ARVRXRBanner />
       <AboutARVRXR />
       <ARVRXRservice />
       <BenefitsARVRXR />
       {/* <ARVRXRTool /> */}
-      <ARVRXRPortfolio/>
-      <ContactUs />
-      <Footer />
+      <div ref={portfolioRef}><ARVRXRPortfolio/></div> 
+      <div ref={contactUsRef}><ContactUs /></div>
+      <Footer scrollToRefs={scrollToRefs}/>
     </>
   )
 }

@@ -34,15 +34,14 @@ const LandingPage = () => {
       <div ref={portfolioRef}></div>
       <SectionTwo />
       <OwnerDetails />
-      {/* <HowWeDoIt/> */}
-      
+      {/* <HowWeDoIt/> */}  
       <div ref={contactUsRef}>
         <ContactUs />
       </div>
 
     
 
-      <Footer />
+      <Footer scrollToRefs={scrollToRefs}/>
     </div>
   );
 };
