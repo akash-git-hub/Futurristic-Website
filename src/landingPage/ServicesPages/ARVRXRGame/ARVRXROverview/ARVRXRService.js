@@ -23,7 +23,7 @@ export const ARVRXRservice = () => {
                         </Col>
                     </Row>
                     <Row className="mb-3">
-                        <Col className='mb-3 position-relative'>
+                        <Col sm={12} md={4} lg={4} className='mb-3 position-relative'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="d-flex justify-content-center p-3">
@@ -35,7 +35,7 @@ export const ARVRXRservice = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col className='mb-3 position-relative'>
+                        <Col sm={12} md={4} lg={4} className='mb-3 position-relative'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="d-flex justify-content-center p-3">
@@ -47,7 +47,7 @@ export const ARVRXRservice = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col className='mb-3 position-relative'>
+                        <Col sm={12} md={4} lg={4} className='mb-3 position-relative'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="d-flex justify-content-center p-3">
@@ -61,7 +61,7 @@ export const ARVRXRservice = () => {
                         </Col>
                     </Row>
                     <Row className="mt-4 mb-3">
-                        <Col className='mb-3 position-relative'>
+                        <Col sm={12} md={4} lg={4} className='mb-3 position-relative'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="d-flex justify-content-center p-3">
@@ -73,7 +73,7 @@ export const ARVRXRservice = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col className='mb-3 position-relative'>
+                        <Col sm={12} md={4} lg={4} className='mb-3 position-relative'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="d-flex justify-content-center p-3">
@@ -85,7 +85,7 @@ export const ARVRXRservice = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col className='mb-3 position-relative'>
+                        <Col sm={12} md={4} lg={4} className='mb-3 position-relative'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                     <div className="d-flex justify-content-center p-3">

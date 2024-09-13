@@ -18,7 +18,7 @@ export const ServiceMeta = () => {
                         </Col>
                     </Row>
                     <Row className="mb-5">
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -30,7 +30,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -43,7 +43,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -57,7 +57,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -69,7 +69,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -83,12 +83,12 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
                                         <img src="https://futurristic.s3.amazonaws.com/image/video/Icons/Meta-Icon06.png" className="img-fluid Icon-24" alt="" />
-                                        </div>  <h5 className="mb-2 text-justify fontWeight-800 text-center0">Metaverse Decentralized Platforms</h5>
+                                        </div>  <h5 className="mb-2 text-justify fontWeight-800 text-center">Metaverse Decentralized Platforms</h5>
                                     
                                     <p className=" p-3 text-justify text-grey-500">
                                     Design secure, blockchain-enabled platforms for users-owned metaverses with Futurristic. Users govern, manage assets, and collaborate, creating a vibrant decentralized ecosystem.
@@ -97,7 +97,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -110,7 +110,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -123,7 +123,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>
@@ -137,7 +137,7 @@ export const ServiceMeta = () => {
                             </div>
                             <div className='BenefitContentMetashadow'></div>
                         </Col>
-                        <Col lg={4} sm={12} className='mb-5 animationcol'>
+                        <Col lg={4} md={6} sm={12}  className='mb-5 animationcol'>
                             <div className="BenefitContentMeta">
                                 <div className="vstack gap-1">
                                 <div className='d-flex justify-content-center p-3'>

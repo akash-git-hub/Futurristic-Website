@@ -21,7 +21,7 @@ export const BenefitMeta = () => {
                     </Col>
                 </Row>
                 <Row className="mb-1">
-                    <Col lg={2} sm={12} className='mb-3'>
+                     <Col md={2} sm={3} xs={4} className='mb-3'>
                         <div className="BenefitContent1">
                             <img src={benefit1} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -29,7 +29,7 @@ export const BenefitMeta = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={2} sm={12} className='mb-3'>
+                     <Col md={2} sm={3} xs={4} className='mb-3'>
                         <div className="BenefitContent2">
                             <img src={benefit2} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -37,7 +37,7 @@ export const BenefitMeta = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={2} sm={12} className='mb-3'>
+                     <Col md={2} sm={3} xs={4} className='mb-3'>
                         <div className="BenefitContent1">
                             <img src={benefit3} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -45,7 +45,7 @@ export const BenefitMeta = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={2} sm={12} className='mb-3'>
+                     <Col md={2} sm={3} xs={4} className='mb-3'>
                         <div className="BenefitContent2">
                             <img src={benefit4} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -53,7 +53,7 @@ export const BenefitMeta = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={2} sm={12} className='mb-3'>
+                     <Col md={2} sm={3} xs={4} className='mb-3'>
                         <div className="BenefitContent1">
                             <img src={benefit5} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -61,7 +61,7 @@ export const BenefitMeta = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={2} sm={12} className='mb-3'>
+                     <Col md={2} sm={3} xs={4} className='mb-3'>
                         <div className="BenefitContent2">
                             <img src={benefit6} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">

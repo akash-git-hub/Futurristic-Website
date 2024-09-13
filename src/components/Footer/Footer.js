@@ -57,8 +57,8 @@ const Footer = ({ scrollToRefs }) => {
                             <Nav.Link onClick={() => scrollToRef(scrollToRefs.aboutUsRef)} className='my-2 text-black TD-none'>About Us</Nav.Link>
                             <Nav.Link onClick={() => scrollToRef(scrollToRefs.contactUsRef)} to="" className="my-2    text-black TD-none">Contact Us</Nav.Link>
                             <Nav.Link as={Link} to="https://futurristic.com/fexperience/" className="my-2    text-black TD-none">Our Products</Nav.Link>
-                            <Nav.Link as={Link} to='https://futurristic.com/privacypolicy' className="my-2 text-black TD-none">Privacy Policy</Nav.Link>
-                            <Nav.Link as={Link} to="https://futurristic.com/termsandconditions" className="my-2 text-black TD-none">Terms & Conditions</Nav.Link>
+                            <Nav.Link as={Link} to='/privacypolicy' target="_blank" className="my-2 text-black TD-none">Privacy Policy</Nav.Link>
+                            <Nav.Link as={Link} to="/termsandconditions" target="_blank" className="my-2 text-black TD-none">Terms & Conditions</Nav.Link>
                         </Col>  
                         
                         <Col xs={12} md={4} className="text-center text-md-end mb-3 mb-md-0">

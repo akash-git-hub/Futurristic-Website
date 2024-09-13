@@ -25,7 +25,7 @@ export const BenefitAR = () => {
                 </Row>
                 <Row>
                     {/* First Column */}
-                    <Col>
+                    <Col md={2} sm={3} xs={4}>
                         <div className="BenefitContent1">
                             <img src={benefit1} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -35,7 +35,7 @@ export const BenefitAR = () => {
                         </div>
                     </Col>
                     {/* Second Column */}
-                    <Col>
+                    <Col md={2} sm={3} xs={4}>
                         <div className="BenefitContent2">
                             <img src={benefit2} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -45,7 +45,7 @@ export const BenefitAR = () => {
                         </div>
                     </Col>
                     {/* Third Column */}
-                    <Col>
+                    <Col md={2} sm={3} xs={4}>
                         <div className="BenefitContent1">
                             <img src={benefit3} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -55,7 +55,7 @@ export const BenefitAR = () => {
                         </div>
                     </Col>
                     {/* Fourth Column */}
-                    <Col>
+                    <Col md={2} sm={3} xs={4}>
                         <div className="BenefitContent2">
                             <img src={benefit4} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -64,7 +64,7 @@ export const BenefitAR = () => {
                         </div>
                     </Col>
                     {/* Fifth Column */}
-                    <Col>
+                    <Col md={2} sm={3} xs={4}>
                         <div className="BenefitContent1">
                             <img src={benefit5} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
@@ -74,7 +74,7 @@ export const BenefitAR = () => {
                         </div>
                     </Col>
                     {/* Sixth Column */}
-                    <Col>
+                    <Col md={2} sm={3} xs={4}>
                         <div className="BenefitContent2">
                             <img src={benefit6} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">

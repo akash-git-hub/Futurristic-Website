@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Stack, Nav } from 'react-bootstrap'
 import { BiLogoGmail } from "react-icons/bi";
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaRegCopyright } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
@@ -110,7 +110,7 @@ export const TermConditionContent = () => {
                                 <h1>Futurristic Business Solutions</h1>
                                 <h4>100, Anurag Nagar Ln, Part II, Scheme No 114, Indore, Madhya Pradesh 452010</h4>
                                 <Stack direction='horizontal' gap={1} className='mt-4'>
-                                    <Nav.Link as={Link} to="mailto:futurristic@gmail.com" target='_blank' className="me-3 text-black TD-none">
+                                    <Nav.Link as={Link} to="mailto:support@futurristic.com" target='_blank' className="me-3 text-black TD-none">
                                     <BiLogoGmail className='me-3 fontSize-24' />
                                     </Nav.Link>
                                     <Nav.Link as={Link} to="https://www.facebook.com/futurristicbiz" target='_blank' className="me-3 text-black TD-none">
@@ -124,6 +124,16 @@ export const TermConditionContent = () => {
                                     </Nav.Link>
                                 </Stack>
                             </div>
+                        </Col>
+                    </Row>
+                    <Row className='mt-3'>
+                        <Col md={12}>
+                            <p style={{
+                                padding: '10px',
+                                background: '#000',
+                                color: '#fff',
+                                marginTop: '20px'
+                            }}>Copyright <FaRegCopyright /> 2024 | All Rights Reserved</p>
                         </Col>
                     </Row>
                 </Container>

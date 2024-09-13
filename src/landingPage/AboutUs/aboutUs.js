@@ -12,7 +12,7 @@ const AboutUs = ({scrollToRefs}) =>
           console.error('Reference is not defined or current is null:', ref);  // Debugging output
         }
       };
-      console.log(scrollToRefs);
+      
 
       const handleContactClick = () => {
         scrollToRef(scrollToRefs.contactUsRef); // Scroll to contactUsRef

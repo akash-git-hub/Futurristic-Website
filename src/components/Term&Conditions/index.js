@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from '../Header/Header'
 import { BannerCondition } from './Banner'
 import { TermConditionContent } from './TermConditionContent'
 import Footer from '../Footer/Footer'
+import TermsAndPrivacyHeader from '../Header/TermsAndPrivacyHeader'
 
 
 
@@ -11,10 +11,11 @@ import Footer from '../Footer/Footer'
 export const TermCondition = () => {
   return (
     <>
-      <Header/>
+      <TermsAndPrivacyHeader/>
       <BannerCondition/>
       <TermConditionContent/>
-      <Footer/>
+      {/* <Footer/> */}
+      
     </>
   )
 }

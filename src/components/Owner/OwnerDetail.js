@@ -5,7 +5,7 @@ const OwnerDetails = () => {
     <Container>
       <div className="ownerContainer my-5">
         <Row className="justify-content-center">
-          <Col lg={5} md={6} sm={12} xs={12}>
+          <Col lg={6} md={6} sm={12} xs={12}>
             <div className="OwnerDetail" style={{ margin: '20px 0px' }}>
               <div className="d-flex gap-3">
                 <img src="https://futurristic.s3.amazonaws.com/image/AmitSir.jpeg" alt="Amit sir" className="img-fluid Img-25" />
@@ -23,7 +23,7 @@ const OwnerDetails = () => {
               </div>
             </div>
           </Col>
-          <Col lg={5} md={6} sm={12} xs={12}>
+          <Col lg={6} md={6} sm={12} xs={12}>
             <div className="OwnerDetail" style={{ background: 'rgb(255, 255, 255)', margin: '20px 0px' }}>
               <div className="d-flex gap-3">
                 <img src="https://futurristic.s3.amazonaws.com/image/Deepeshsir.jpeg" alt="Deepesh sir" className="img-fluid Img-25" />
