@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Stack } from 'react-bootstrap'
+import { FaRegCopyright } from 'react-icons/fa'
 
 export const PrivacyContent = () => {
     return (
@@ -80,6 +81,16 @@ export const PrivacyContent = () => {
                                     <h4>Thank you for trusting Futuristic Business Solutions with your information. We are committed to protecting your privacy and ensuring a safe and secure online experience.</h4>
                                 </Stack>
                             </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={12}>
+                            <p style={{
+                                padding: '10px',
+                                background: '#000',
+                                color: '#fff',
+                                marginTop: '20px'
+                            }}>Copyright <FaRegCopyright /> 2024 | All Rights Reserved</p>
                         </Col>
                     </Row>
                 </Container>

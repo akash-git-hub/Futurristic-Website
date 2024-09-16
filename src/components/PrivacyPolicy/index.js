@@ -1,20 +1,16 @@
-import React from 'react'
-import Header from '../Header/Header'
+import React from 'react' 
 import { BannerPrivacy } from './Banner'
 import { PrivacyContent } from './PrivacyContent'
 import Footer from '../Footer/Footer'
-
-
-
-
+import TermsAndPrivacyHeader from '../Header/TermsAndPrivacyHeader'
 
 export const PrivacyPolicy = () => {
   return (
     <>
-      <Header/>
+      <TermsAndPrivacyHeader/>
       <BannerPrivacy/>
       <PrivacyContent/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

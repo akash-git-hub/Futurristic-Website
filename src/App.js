@@ -45,21 +45,21 @@ function App() {
   
   const BlockChainWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Blockchain Integration and Solutions " description="Have your business benefit from expert Blockchain integration and solutions, ensuring streamlined operations and enhanced security measures." />
+      <RouteSpecificMeta title="Blockchain Integration and Solutions  | Blockchain Integration and Development Services" description="Have your business benefit from expert Blockchain integration and solutions, ensuring streamlined operations and enhanced security measures." />
       <BlockChain />
     </>
   );
   
   const ARVRTraningWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Interactive AR/VR/XR Game Development" description="Get your first or upgrade existing game with the AR/VR/XR game development services & solutions. Transform player experiences today with us." />
+      <RouteSpecificMeta title="AR VR Training & Educational Platform" description="Give your AR/VR training & educational platform a boost by offering an immersive experience to your learners. Get enhanced educational outcomes. " />
       <ARVRTraning />
     </>
   );
   
   const ARVRXRGameWithMeta = () => (
     <>
-      <RouteSpecificMeta title="AR VR Training & Educational Platform" description="Give your AR/VR training & educational platform a boost by offering an immersive experience to your learners. Get enhanced educational outcomes." />
+      <RouteSpecificMeta title="Interactive AR/VR/XR Game Development" description="Get your first or upgrade existing game with the AR/VR/XR game development services & solutions. Transform player experiences today with us." />
       <ARVRXRGame />
     </>
   );
@@ -96,7 +96,7 @@ function App() {
           <Route path="/interactive-ar-vr-xr-game-development" element={<ARVRXRGameWithMeta />} />
           <Route path="/mobile-web-&-enterprise-development" element={<MobileAppWithMeta />} />
           <Route path="/privacypolicy" element={<PrivacyPolicyWithMeta />} />
-          <Route path="/termandcondition" element={<TermConditionWithMeta />} />
+          <Route path="/termsandconditions" element={<TermConditionWithMeta />} />
         </Routes>
       </BrowserRouter>
     </div>

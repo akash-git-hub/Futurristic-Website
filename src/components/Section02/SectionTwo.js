@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack, Tab, Tabs, Modal } from 'react-bootstrap';
+import Slider from 'react-slick';
 
 const SectionTwo = () => {
   const [index, setIndex] = useState(0);
   const [isHovered, setIsHovered] = useState([false, false, false, false]);
   const [showModal, setShowModal] = useState(false);
+  const [ ModalVideoName, setModalVideoName ] = useState('');
 
   const [modalVideoSrc, setModalVideoSrc] = useState('');
 
@@ -180,6 +182,24 @@ const SectionTwo = () => {
 
   ]);
 
+  var settings ={
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive:[
+      {
+        breakpoint:480,
+        settings:{
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      }
+    ]
+   }
+
 
 
   const handleMouseEnter = (cardIndex) => {
@@ -193,6 +213,8 @@ const SectionTwo = () => {
 
   const handleCardClick = (cardIndex, contentArray) => {
     const videoSrc = contentArray[cardIndex].video;
+    const videoname = contentArray[cardIndex].TumbTitle;
+    setModalVideoName(videoname);
     setModalVideoSrc(videoSrc);
     setShowModal(true);
   };
@@ -204,23 +226,62 @@ const SectionTwo = () => {
 
   return (
     <>
-      <div class="FuturristicGame02 mt-5 mb-5">
+      <div className="FuturristicGame02 mt-5 mb-5">
         <Container>
           <h1 className="mt-3 mb-1 fontWeight-800" style={{ textAlign: 'center', fontWeight:'800' }}>
             Discover Our Dazzling Portfolio
           </h1>
           <h5>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</h5>
-          <Tabs defaultActiveKey="all" id="uncontrolled-tab-example">
+          <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className='mx-2'>
+
             <Tab eventKey="all" title="Metaverse" className='TabDark' variant="dark">
-              <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
+            <Row className='p-4'>
+              {cardContent.length >= 3 ? (            
+                <Slider {...settings}>
                 {cardContent.map((card, cardIndex) => (
-                  <Col key={cardIndex}>
+                  <Col className="p-2 " key={cardIndex}>
                     <Card
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText' : ''}`}
-                      onClick={() => handleCardClick(cardIndex)} // Added onClick handler
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex,cardContent)} // Added onClick handler
+                    >
+                      {isHovered === cardIndex ? (
+                        <video
+                          className=" "
+                          autoPlay
+                          loop
+                          muted
+                          onEnded={() => setIndex(cardIndex)}
+                        >
+                          <source src={card.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <Card.Img variant="top" src={card.image} />
+                      )}
+                      <Card.Body
+                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                          }`}
+                      >
+                        <Stack direction="vertical" gap={0}>
+                          <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                        </Stack>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+                </Slider>
+              ):(
+                cardContent.map((card, cardIndex) => (
+                 <Col className="p-2 " key={cardIndex}>
+                    <Card
+                      onMouseEnter={() => handleMouseEnter(cardIndex)}
+                      onMouseLeave={handleMouseLeave}
+                      activeindex={index}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, cardContent)}
                     >
                       {isHovered === cardIndex ? (
                         <video
@@ -246,19 +307,22 @@ const SectionTwo = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                ))}
+                )))}
               </Row>
+
             </Tab>
             <Tab eventKey="Web AR" title="Web AR">
-              <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
+              <Row className="p-4 ">
+              {ARVRMRContent.length >= 3 ? (          
+                <Slider {...settings}>
                 {ARVRMRContent.map((card, cardIndex) => (
-                  <Col key={cardIndex}>
+                 <Col className="p-2 " key={cardIndex}>
                     <Card
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText' : ''}`}
-                      onClick={() => handleCardClick(cardIndex, cardContent)}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, ARVRMRContent)}
                     >
                       {isHovered === cardIndex ? (
                         <video
@@ -285,18 +349,58 @@ const SectionTwo = () => {
                     </Card>
                   </Col>
                 ))}
+                </Slider>
+              ) : (
+                ARVRMRContent.map((card, cardIndex) => (
+               <Col className="p-2 " key={cardIndex}>
+                  <Card
+                    onMouseEnter={() => handleMouseEnter(cardIndex)}
+                    onMouseLeave={handleMouseLeave}
+                    activeindex={index}
+                    className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                    onClick={() => handleCardClick(cardIndex, ARVRMRContent)}
+                  >
+                    {isHovered === cardIndex ? (
+                      <video
+                        className="img-fluid video visible"
+                        autoPlay
+                        loop
+                        muted
+                        onEnded={() => setIndex(cardIndex)}
+                      >
+                        <source src={card.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <Card.Img variant="top" src={card.image} />
+                    )}
+                    <Card.Body
+                      className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        }`}
+                    >
+                      <Stack direction="vertical" gap={0}>
+                        <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                      </Stack>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                )))}
               </Row>
             </Tab>
+
             <Tab eventKey="Blockchain" title="Blockchain">
-              <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
+              <Row className="p-4 ">
+              {Blockchain.length > 3 ? (            
+                <Slider {...settings}>
                 {Blockchain.map((card, cardIndex) => (
-                  <Col key={cardIndex}>
+                 <Col className="p-2 " key={cardIndex}>
                     <Card
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText' : ''}`}
-                      onClick={() => handleCardClick(cardIndex, cardContent)}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-30' : ''}`}
+                       
+                      onClick={() => handleCardClick(cardIndex,Blockchain)}
                     >
                       {isHovered === cardIndex ? (
                         <video
@@ -322,19 +426,59 @@ const SectionTwo = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                ))}
+                ))}</Slider>
+              ):(
+                Blockchain.map((card, cardIndex) => (
+                 <Col className="p-2" key={cardIndex}>
+                    <Card
+                      onMouseEnter={() => handleMouseEnter(cardIndex)}
+                      onMouseLeave={handleMouseLeave}
+                      activeindex={index}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-30' : ''}`}
+                       
+                      onClick={() => handleCardClick(cardIndex, Blockchain)}
+                    >
+                      {isHovered === cardIndex ? (
+                        <video
+                          className="img-fluid video visible border-0"
+                          autoPlay
+                          loop
+                          muted
+                          onEnded={() => setIndex(cardIndex)}
+                        >
+                          <source src={card.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <Card.Img variant="top" src={card.image} />
+                      )}
+                      <Card.Body
+                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                          }`}
+                      >
+                        <Stack direction="vertical" gap={0}>
+                          <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                        </Stack>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+               )))}
               </Row>
             </Tab>
+
+
             <Tab eventKey="AR/VR Training" title="AR/VR Training">
-              <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
+              <Row className="p-4 ">
+              {ARtraning.length >= 3 ? (            
+                <Slider {...settings}>
                 {ARtraning.map((card, cardIndex) => (
-                  <Col key={cardIndex}>
+                 <Col className="p-2 " key={cardIndex}>
                     <Card
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText' : ''}`}
-                      onClick={() => handleCardClick(cardIndex, cardContent)}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, ARtraning)}
                     >
                       {isHovered === cardIndex ? (
                         <video
@@ -360,19 +504,58 @@ const SectionTwo = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                ))}
+                ))}</Slider>
+              ):(
+                ARtraning.map((card, cardIndex) => (
+                 <Col className="p-2 " key={cardIndex}>
+                    <Card
+                      onMouseEnter={() => handleMouseEnter(cardIndex)}
+                      onMouseLeave={handleMouseLeave}
+                      activeindex={index}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, ARtraning)}
+                    >
+                      {isHovered === cardIndex ? (
+                        <video
+                          className="img-fluid video visible"
+                          autoPlay
+                          loop
+                          muted
+                          onEnded={() => setIndex(cardIndex)}
+                        >
+                          <source src={card.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <Card.Img variant="top" src={card.image} />
+                      )}
+                      <Card.Body
+                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                          }`}
+                      >
+                        <Stack direction="vertical" gap={0}>
+                          <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                        </Stack>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+              )))}
               </Row>
             </Tab>
+
+
             <Tab eventKey="Gaming" title="Gaming">
-              <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
+              <Row className="p-4 ">
+              {GameContent.length >= 3 ? (            
+                <Slider {...settings}>
                 {GameContent.map((card, cardIndex) => (
-                  <Col key={cardIndex}>
+                 <Col className="p-2 " key={cardIndex}>
                     <Card
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText' : ''}`}
-                      onClick={() => handleCardClick(cardIndex, cardContent)}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, GameContent)}
                     >
                       {isHovered === cardIndex ? (
                         <video
@@ -398,19 +581,57 @@ const SectionTwo = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                ))}
+                ))}</Slider>
+              ):(
+                GameContent.map((card, cardIndex) => (
+                 <Col className="p-2 " key={cardIndex}>
+                    <Card
+                      onMouseEnter={() => handleMouseEnter(cardIndex)}
+                      onMouseLeave={handleMouseLeave}
+                      activeindex={index}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, GameContent)}
+                    >
+                      {isHovered === cardIndex ? (
+                        <video
+                          className="img-fluid video visible"
+                          autoPlay
+                          loop
+                          muted
+                          onEnded={() => setIndex(cardIndex)}
+                        >
+                          <source src={card.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <Card.Img variant="top" src={card.image} />
+                      )}
+                      <Card.Body
+                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                          }`}
+                      >
+                        <Stack direction="vertical" gap={0}>
+                          <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                        </Stack>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                )))}
               </Row>
             </Tab>
+
             <Tab eventKey="Mobile Development" title="Mobile Development">
-              <Row xs={1} sm={2} md={4} className="g-4 FeatureRowMobile">
+              <Row className="p-4 ">
+              {Mobile.length >= 3 ? (            
+                <Slider {...settings}>
                 {Mobile.map((card, cardIndex) => (
-                  <Col key={cardIndex}>
+                 <Col className="p-2 " key={cardIndex}>
                     <Card
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText' : ''}`}
-                      onClick={() => handleCardClick(cardIndex, cardContent)}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, Mobile)}
                     >
                       {isHovered === cardIndex ? (
                         <video
@@ -436,7 +657,42 @@ const SectionTwo = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                ))}
+                ))}</Slider>
+              ):(
+                Mobile.map((card, cardIndex) => (
+                 <Col className="p-2 " key={cardIndex}>
+                    <Card
+                      onMouseEnter={() => handleMouseEnter(cardIndex)}
+                      onMouseLeave={handleMouseLeave}
+                      activeindex={index}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      onClick={() => handleCardClick(cardIndex, Mobile)}
+                    >
+                      {isHovered === cardIndex ? (
+                        <video
+                          className="img-fluid video visible"
+                          autoPlay
+                          loop
+                          muted
+                          onEnded={() => setIndex(cardIndex)}
+                        >
+                          <source src={card.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <Card.Img variant="top" src={card.image} />
+                      )}
+                      <Card.Body
+                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                          }`}
+                      >
+                        <Stack direction="vertical" gap={0}>
+                          <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                        </Stack>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+              )))}
               </Row>
             </Tab>
           </Tabs>
@@ -444,9 +700,9 @@ const SectionTwo = () => {
       </div>
 
 
-      <Modal show={showModal} onHide={handleCloseModal} dialogClassName="custom-modal">
+      <Modal show={showModal} onHide={handleCloseModal} dialogClassName="custom-modal"  size="sm">
         <Modal.Header closeButton>
-          <Modal.Title>Video Player</Modal.Title>
+          <Modal.Title>{ModalVideoName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {modalVideoSrc && (

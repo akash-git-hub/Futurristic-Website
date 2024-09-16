@@ -9,11 +9,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Helmet>
-      <meta name='description' content=''>
-      
+      <meta name='description' content='abcd'>
+
       </meta>
-    </Helmet>
-    <App />
+    </Helmet><App />
   </React.StrictMode>
 );
 

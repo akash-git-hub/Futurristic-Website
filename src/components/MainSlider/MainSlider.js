@@ -18,7 +18,7 @@ const MainSlider = () => {
             <Carousel activeindex={index} onSelect={handleSelect} controls={false}>
                 <Carousel.Item>
                     <video className='img-fluid MainSliderVideo' autoPlay loop muted onEnded={() => setIndex(1)}>
-                        <source src='https://futurristic.s3.amazonaws.com/image/video/Metaverse/VisionPro.mp4' type='video/mp4' />
+                        <source src='https://futurristic.s3.amazonaws.com/image/video/Metaverse/VisionPro.mp4' type='video/mp4'/>
                         Your browser does not support the video tag.
                     </video>
                     <Carousel.Caption style={{

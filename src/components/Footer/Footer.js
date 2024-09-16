@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col, Nav, Stack } from 'react-bootstrap';
 import { BiLogoGmail, BiSolidPhoneCall } from 'react-icons/bi';
 import { BsMailbox2 } from 'react-icons/bs';
@@ -10,15 +10,17 @@ import { FaRegCopyright } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 
-const Footer = ({scrollToRefs}) => {
-  const scrollToRef = (ref) => {
-    if (ref && ref.current) {
-      console.log('Scrolling to:', ref.current);  // Debugging output
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      console.error('Reference is not defined or current is null:', ref);  // Debugging output
-    }
-  };
+const Footer = ({ scrollToRefs }) => {
+    const scrollToRef = (ref) => {
+        if (ref && ref.current) {
+            console.log('Scrolling to:', ref.current);  // Debugging output
+            ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Reference is not defined or current is null:', ref);  // Debugging output
+        }
+    };
+
+
 
     return (
         <>
@@ -41,7 +43,7 @@ const Footer = ({scrollToRefs}) => {
                                 <a href="mailto:support@futurristic.com">
                                     <BiLogoGmail className='fontSize-24 text-black' />
                                 </a>
-                                <a href="mailto:support@futurristic.com">
+                                <a href="https://www.instagram.com/futurristicbiz/">
                                     <RiInstagramFill className='fontSize-24 text-black' />
                                 </a>
                             </Stack>
@@ -49,15 +51,16 @@ const Footer = ({scrollToRefs}) => {
 
 
                         {/* Right side links */}
-                        <Col xs={12} md={4}  className="text-md-left " style={{ textAlign: 'center' }}>
-                            <Nav.Link as={Link} to="" className="my-2    text-black TD-none">Home</Nav.Link>
-                            <Nav.Link as={Link} onClick={() => scrollToRef(scrollToRefs.aboutUsRef)}  to="" className="my-2    text-black TD-none">About</Nav.Link>
-                            <Nav.Link as={Link} onClick={() => scrollToRef(scrollToRefs.serviceRef)} to="" className="my-2    text-black TD-none">Services</Nav.Link>
+                        <Col xs={12} md={4} className="text-md-left " style={{ textAlign: 'center' }}>
+                            <Nav.Link as={Link} to="/" className="my-2 text-black TD-none">Home</Nav.Link>
+                            <Nav.Link onClick={() => scrollToRef(scrollToRefs.serviceRef)} className='my-2 text-black TD-none'>Services</Nav.Link>
+                            <Nav.Link onClick={() => scrollToRef(scrollToRefs.aboutUsRef)} className='my-2 text-black TD-none'>About Us</Nav.Link>
+                            <Nav.Link onClick={() => scrollToRef(scrollToRefs.contactUsRef)} to="" className="my-2    text-black TD-none">Contact Us</Nav.Link>
                             <Nav.Link as={Link} to="https://futurristic.com/fexperience/" className="my-2    text-black TD-none">Our Products</Nav.Link>
-                            <Nav.Link as={Link} onClick={() => scrollToRef(scrollToRefs.contactUsRef)} to="" className="my-2    text-black TD-none">Contact Us</Nav.Link>
-                            <Nav.Link as={Link} to="/privacypolicy" className="my-2 text-black TD-none">Privacy Policy</Nav.Link>
-                            <Nav.Link as={Link} to="/termandcondition" className="my-2 text-black TD-none">Terms & Conditions</Nav.Link>
-                        </Col>
+                            <Nav.Link as={Link} to='/privacypolicy' target="_blank" className="my-2 text-black TD-none">Privacy Policy</Nav.Link>
+                            <Nav.Link as={Link} to="/termsandconditions" target="_blank" className="my-2 text-black TD-none">Terms & Conditions</Nav.Link>
+                        </Col>  
+                        
                         <Col xs={12} md={4} className="text-center text-md-end mb-3 mb-md-0">
                             <Stack direction='vertical' gap={2}>
                                 <h5>Address</h5>

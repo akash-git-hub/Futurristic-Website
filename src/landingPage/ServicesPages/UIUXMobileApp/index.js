@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react'
 import Header from '../../../components/Header/Header'
 import { BannerMobileApp } from './MobileAppOverview/BannerMobileApp'
 import { AboutMobileApp } from './MobileAppOverview/AboutMobileApp'
@@ -8,24 +8,29 @@ import { MobileAppTool } from './MobileAppOverview/MobileAppTool'
 import { MobileAppPortfolio } from './MobileAppOverview/MobileAppPortfolio'
 import ContactUs from '../../../components/ContactUs/ContactUs'
 import Footer from '../../../components/Footer/Footer'
+import ServiceHeader from '../../../components/Header/ServiceHeader'
 
 export const MobileApp = () => {
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const portfolioRef = useRef(null);
+  const contactUsRef = useRef(null);
 
+  const scrollToRefs = {
+    portfolioRef,
+    contactUsRef,
+  };
+  
   return (
     <>
-      <Header />
+      <ServiceHeader scrollToRefs={scrollToRefs} />
       <BannerMobileApp />
       <AboutMobileApp />
       <MobileAppservice />
       <BenefitsMobileApp />
-      {/* <MobileAppTool /> */}
-      <MobileAppPortfolio/>
-      <ContactUs />
-      <Footer />
+      {/* <MobileAppTool /> */} 
+      <div ref={portfolioRef}><MobileAppPortfolio/></div> 
+      <div ref={contactUsRef}><ContactUs /></div>
+      <Footer scrollToRefs={scrollToRefs}/>
     </>
   )
 }
