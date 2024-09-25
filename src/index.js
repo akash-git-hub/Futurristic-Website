@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     <Helmet>
       <meta name='description' content='abcd'>
-      
+
       </meta>
     </Helmet>
     <App />

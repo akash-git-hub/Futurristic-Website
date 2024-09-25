@@ -115,13 +115,13 @@ const ContactUs = () => {
                                             <Form.Group  className="mt-3" as={Col} md="12" controlId="1">
                                                 <Form.Check type='checkbox' id='contact-check' >
                                                     <Form.Check.Input type='checkbox' name='agree' id='1' required />
-                                                    <Form.Check.Label className='text-dark'>I agree to <Link to='https://futurristic.com/termsandconditions' target='_blank' style={{ textDecoration: "none" }}>Terms and Conditions</Link> and <Link to='https://futurristic.com/privacypolicy' target='_blank' style={{ textDecoration: "none" }}>Privacy Policy .</Link></Form.Check.Label>
+                                                    <Form.Check.Label className='text-dark'>I agree to <Link to='/termsandconditions' target='_blank' style={{ textDecoration: "none" }}>Terms and Conditions</Link> and <Link to='/privacypolicy' target='_blank' style={{ textDecoration: "none" }}>Privacy Policy .</Link></Form.Check.Label>
                                                     <Form.Control.Feedback type="invalid"> You must agree before submitting.</Form.Control.Feedback>
                                                 </Form.Check>
                                             </Form.Group>
-                                             <Form.Group className="mt-3" as={Col} md='12' sm='10' xs='10'>
+                                             {/* <Form.Group className="mt-3" as={Col} md='12' sm='10' xs='10'>
                                              <ReCAPTCHA sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' onChange={captchaclick}/>
-                                             </Form.Group>
+                                             </Form.Group> */}
                                         </Row>
                                         <Button type="submit" variant="dark" className="ContactBtn rounded-5" disabled={loading}>Submit</Button>
                                     </Form>
