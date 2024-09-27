@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack } from 'react-bootstrap';
-import { FaGamepad } from 'react-icons/fa';
 import Slider from 'react-slick';
 
 export const PortfolioAR = () => {

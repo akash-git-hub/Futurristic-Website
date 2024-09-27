@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col, Nav, Stack } from 'react-bootstrap';
-import { BiLogoGmail, BiSolidPhoneCall } from 'react-icons/bi';
+import { BiLogoGmail } from 'react-icons/bi';
 import { BsMailbox2 } from 'react-icons/bs';
 import { RiInstagramFill } from "react-icons/ri";
 
-import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import { HiLocationMarker } from 'react-icons/hi';
 import { FaRegCopyright } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -33,7 +33,6 @@ const Footer = ({ scrollToRefs }) => {
                             <h6>We Forge Frontiers</h6>
                             <h5 className='fontWeight-500 mt-5'>Lets Connect</h5>
                             <Stack className='mt-4' direction='horizontal' gap={2}>
-
                                 <a href="https://www.linkedin.com/company/futurristicbusinesssolutions" target="_blank" rel="noopener noreferrer">
                                     <FaLinkedinIn className='fontSize-24 text-black' />
                                 </a>

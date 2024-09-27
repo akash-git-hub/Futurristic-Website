@@ -77,7 +77,7 @@ export const PrivacyContent = () => {
                             <div className='my-4'>
                                 <Stack direction='row' gap={1}>
                                     <h1>8. Contact Us</h1>
-                                    <h4>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at  <a href="mailto:support@futurristic.com" target='_blank'>support@futurristic.com</a></h4>
+                                    <h4>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at  <a href="mailto:support@futurristic.com" target='_blank' rel="noreferrer">support@futurristic.com</a></h4>
                                     <h4>Thank you for trusting Futuristic Business Solutions with your information. We are committed to protecting your privacy and ensuring a safe and secure online experience.</h4>
                                 </Stack>
                             </div>

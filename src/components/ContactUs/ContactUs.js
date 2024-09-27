@@ -3,7 +3,6 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { submitContactUsForm } from "../../services/NetworkCall"
 import "react-toastify/dist/ReactToastify.css";
 import Swal from 'sweetalert2';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { Link } from 'react-router-dom';
 import AOS from 'aos'
 
@@ -51,9 +50,9 @@ const ContactUs = () => {
         setFormData((pre) => ({ ...pre, [name]: value }));
     }
 
-    const captchaclick = ( value ) => {
-        console.log("Captcha value:", value);
-    }
+    // const captchaclick = ( value ) => {
+    //     console.log("Captcha value:", value);
+    // }
 
 
     const alertSuccess = () => {

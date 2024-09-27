@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Header from '../components/Header/Header';
 import MainSlider from '../components/MainSlider/MainSlider';
 import AboutUs from './AboutUs/aboutUs';
