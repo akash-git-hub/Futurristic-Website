@@ -22,14 +22,14 @@ export const TermConditionContent = () => {
                             </div>
                             <div className='my-4'>
                                 <Stack direction='row' gap={0}>
-                                    <h2>2. Changes to Terms</h2>
+                                    <h1>2. Changes to Terms</h1>
                                     <h4>We reserve the right to modify these Terms at any time. We will notify you of any changes by updating the "Last Updated" date of these Terms and posting the revised Terms on our website. Your continued use of our Services after such changes constitutes your acceptance of the new Terms.</h4>
                                 </Stack>
                             </div>
                             <div className='my-4'>
                                 <Stack direction='row' gap={0}>
                                     <h2>3. Services</h2>
-                                    <h4>Futurristic Business Solutions provides immersive technology solutions, including but not limited to augmented reality (AR), virtual reality (VR), mixed reality (MR), extended reality (XR), game development, web-based AR (webAR), metaverse development, and blockchain solutions.</h4>
+                                    <h4>Futurristic Business Solutions provides immersive technology solutions, including but not limited to Augmented Reality (AR), Virtual Reality (VR), Mixed Reality (MR), Extended Reality (XR), Game Development, Web-based AR (webAR), Metaverse Development, Visio Pro App Development, and Blockchain Solutions.</h4>
                                 </Stack>
                             </div>
                             <div className='my-4'>

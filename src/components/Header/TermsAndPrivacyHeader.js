@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,15 +8,15 @@ import { Link } from 'react-router-dom';
 const TermsAndPrivacyHeader = ({ scrollToRefs }) => {
   const [isSticky, setSticky] = useState(false);
 
-  const scrollToRef = (ref) => {
-    console.log(ref);
-    if (ref && ref.current) {
-      console.log('Scrolling to:', ref.current);  // Debugging output
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      console.error('Reference is not defined or current is null:', ref);  // Debugging output
-    }
-  };
+  // const scrollToRef = (ref) => {
+  //   console.log(ref);
+  //   if (ref && ref.current) {
+  //     console.log('Scrolling to:', ref.current);  // Debugging output
+  //     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //   } else {
+  //     console.error('Reference is not defined or current is null:', ref);  // Debugging output
+  //   }
+  // };
 
   const handleScroll = () => {
     if (window.scrollY > 50) {

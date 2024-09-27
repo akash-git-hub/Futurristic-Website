@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos'
 import { Container, Row, Col, Stack, Button } from 'react-bootstrap';
 
 const AboutUs = ({scrollToRefs}) => 
@@ -18,6 +19,10 @@ const AboutUs = ({scrollToRefs}) =>
         scrollToRef(scrollToRefs.contactUsRef); // Scroll to contactUsRef
     };
 
+    useEffect(()=>{
+        AOS.init({duration:2000})
+    });
+
     return (
         <>
           
@@ -25,7 +30,7 @@ const AboutUs = ({scrollToRefs}) =>
                 background: '#EBF5FF'
             }}>
                 <Container>
-                    <div className='AboutUs'>
+                    <div className='AboutUs'   data-aos="fade-up">
                         <Row className="align-items-center">
                             <Col md={6} sm={12}>
                                 <div className="AboutUsText">

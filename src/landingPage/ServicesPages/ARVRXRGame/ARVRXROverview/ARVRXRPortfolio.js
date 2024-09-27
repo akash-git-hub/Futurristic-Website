@@ -37,6 +37,20 @@ export const ARVRXRPortfolio = () => {
             image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/Walkopoly.png',
             video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/Walkopoly.mp4',
             TumbTitle: 'Walkopoly'
+          }, {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.mp4',
+            TumbTitle: 'Human & Dinosaur'
+          },
+          {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Lava&Space.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Lava&Space.mp4',
+            TumbTitle: 'Lava & Space'
+          },
+          {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Butterfly.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Butterfly.mp4',
+            TumbTitle: 'Butterfly '
           },
       
     

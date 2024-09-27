@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
 import { Card, Col, Container, Row, Stack, Tab, Tabs, Modal } from 'react-bootstrap';
 import Slider from 'react-slick';
+ 
 
 const SectionTwo = () => {
   const [index, setIndex] = useState(0);
@@ -10,6 +12,11 @@ const SectionTwo = () => {
 
   const [modalVideoSrc, setModalVideoSrc] = useState('');
 
+  useEffect(()=>{
+    AOS.init({duration:2000})
+});
+
+  // ------------Portfolio for Metaverse------------------------
   const [cardContent] = useState([
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-Metaverse.png',
@@ -36,8 +43,24 @@ const SectionTwo = () => {
       video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-EducationMeta.mp4',
       TumbTitle: 'Training Metaverse'
     },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-SkillsetMetaverse.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-SkillsetMetaverse.mp4',
+      TumbTitle: 'Skillset Metaverse '
+    },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/EducationMetaverse.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/EducationMetaverse .mp4',
+      TumbTitle: 'Education Metaverse'
+    },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/SaudiMetaverse.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/SaudiMetaverse.mp4',
+      TumbTitle: 'Saudi Metaverse'
+    },
   ]);
 
+  // ------------Portfolio for Web AR------------------------
   const [ARVRMRContent] = useState([
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Branding/01-Golf.png',
@@ -64,8 +87,14 @@ const SectionTwo = () => {
       video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Chirsmas.mp4',
       TumbTitle: 'Branding & Advertising'
     },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/EngineVR.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/EngineVR.mp4',
+      TumbTitle: ' Engine VR'
+    },
   ]);
 
+  // ------------Portfolio for Blockchain------------------------
   const [Blockchain] = useState([
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Blockchain/01-Alveychain.png',
@@ -85,6 +114,7 @@ const SectionTwo = () => {
 
   ]);
 
+  // ------------Portfolio for Gaming------------------------
   const [GameContent] = useState([
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-BoxingVR.png',
@@ -116,9 +146,25 @@ const SectionTwo = () => {
       video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/Walkopoly.mp4',
       TumbTitle: 'Walkopoly'
     },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.mp4',
+      TumbTitle: 'Human & Dinosaur'
+    },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Lava&Space.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Lava&Space.mp4',
+      TumbTitle: 'Lava & Space'
+    },
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Butterfly.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Butterfly.mp4',
+      TumbTitle: 'Butterfly '
+    },
 
   ]);
 
+// ------------Portfolio for AR/VR Training------------------------
   const [ARtraning] = useState([
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-Edscope.png',
@@ -132,7 +178,7 @@ const SectionTwo = () => {
     },
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-CasinoVR.png',
-      video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/PlateVideo01.mp4',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-CasinoVR.mp4',
       TumbTitle: 'Casino - VR'
     },
     {
@@ -150,9 +196,14 @@ const SectionTwo = () => {
       video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Chirsmas.mp4',
       TumbTitle: 'Branding & Advertising'
     },
-
+    {
+      image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.png',
+      video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.mp4',
+      TumbTitle: 'Human & Dinosaur'
+    }
   ]);
 
+// ------------Portfolio for Mobile Development------------------------  
   const [Mobile] = useState([
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Game/01App-vibro.png',
@@ -227,12 +278,12 @@ const SectionTwo = () => {
   return (
     <>
       <div className="FuturristicGame02 mt-5 mb-5">
-        <Container>
+        <Container  data-aos="fade-up">
           <h1 className="mt-3 mb-1 fontWeight-800" style={{ textAlign: 'center', fontWeight:'800' }}>
             Discover Our Dazzling Portfolio
           </h1>
           <h5>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</h5>
-          <Tabs defaultActiveKey="all" id="uncontrolled-tab-example" className='mx-2'>
+          <Tabs defaultActiveKey="all" id="uncontrolled-tab-example">
 
             <Tab eventKey="all" title="Metaverse" className='TabDark' variant="dark">
             <Row className='p-4'>
@@ -244,12 +295,12 @@ const SectionTwo = () => {
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20 ' : ''}`}
                       onClick={() => handleCardClick(cardIndex,cardContent)} // Added onClick handler
                     >
                       {isHovered === cardIndex ? (
                         <video
-                          className=" "
+                          className=""
                           autoPlay
                           loop
                           muted
@@ -554,7 +605,7 @@ const SectionTwo = () => {
                       onMouseEnter={() => handleMouseEnter(cardIndex)}
                       onMouseLeave={handleMouseLeave}
                       activeindex={index}
-                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-20' : ''}`}
+                      className={`custom-card ${isHovered === cardIndex ? 'hovered scaleText w-30' : ''}`}
                       onClick={() => handleCardClick(cardIndex, GameContent)}
                     >
                       {isHovered === cardIndex ? (

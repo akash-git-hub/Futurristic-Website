@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { submitContactUsForm } from "../../services/NetworkCall"
 import "react-toastify/dist/ReactToastify.css";
 import Swal from 'sweetalert2';
-import ReCAPTCHA from 'react-google-recaptcha';
 import { Link } from 'react-router-dom';
+import AOS from 'aos'
 
 const ContactUs = () => {
     const [validated, setValidated] = useState(false);
@@ -28,7 +28,7 @@ const ContactUs = () => {
         // call the apis
         if (form.checkValidity() === true) {
             const res = await submitContactUsForm(formData);
-
+            console.log(res);
             if (res.success) {
                 alertSuccess();
                 setValidated(false);
@@ -50,9 +50,9 @@ const ContactUs = () => {
         setFormData((pre) => ({ ...pre, [name]: value }));
     }
 
-    const captchaclick = ( value ) => {
-        console.log("Captcha value:", value);
-    }
+    // const captchaclick = ( value ) => {
+    //     console.log("Captcha value:", value);
+    // }
 
 
     const alertSuccess = () => {
@@ -73,13 +73,17 @@ const ContactUs = () => {
         });
     }
 
+    useEffect(()=>{
+        AOS.init({duration:2000})
+    });
+
 
     return (
         <>
 
             <div className="ContactMainContainer">
                 <Container>
-                    <div className="FormContent">
+                    <div className="FormContent" data-aos="fade-up">
                         <Row>
                             <Col md={7} sm={12} >
                                 <div className="FormHeading text-left ">
@@ -92,14 +96,14 @@ const ContactUs = () => {
                                         <Row className="mb-3">
                                             <Form.Group className="mt-3" as={Col} md="12" controlId="validationCustom03">
                                                 <Form.Label>Enter Email</Form.Label>
-                                                <Form.Control type="email" placeholder="Email address" required name="email" onChange={inputHandler} />
+                                                <Form.Control type="email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" placeholder="Email address" required name="email" onChange={inputHandler} />
                                                 <Form.Control.Feedback type="invalid" className='text-left'>
                                                     Please enter a valid email.
                                                 </Form.Control.Feedback>
                                             </Form.Group>
                                             <Form.Group className="mt-3" as={Col} md="12" controlId="validationCustom04">
                                                 <Form.Label>Enter Your Mobile Number</Form.Label>
-                                                <Form.Control type="text" pattern="\d{10}" title="Please enter exactly 10 digits" placeholder="Mobile number" required name='phoneNumber' onChange={inputHandler} />
+                                                <Form.Control type="text" pattern="[0-9+-]+" title="Please enter mobile number with country code." placeholder="Mobile number" required name='phoneNumber' onChange={inputHandler} />
                                                 <Form.Control.Feedback type="invalid" className='text-left'>
                                                     Please enter a valid mobile number.
                                                 </Form.Control.Feedback>
@@ -119,9 +123,9 @@ const ContactUs = () => {
                                                     <Form.Control.Feedback type="invalid"> You must agree before submitting.</Form.Control.Feedback>
                                                 </Form.Check>
                                             </Form.Group>
-                                             <Form.Group className="mt-3" as={Col} md='12' sm='10' xs='10'>
+                                             {/* <Form.Group className="mt-3" as={Col} md='12' sm='10' xs='10'>
                                              <ReCAPTCHA sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' onChange={captchaclick}/>
-                                             </Form.Group>
+                                             </Form.Group> */}
                                         </Row>
                                         <Button type="submit" variant="dark" className="ContactBtn rounded-5" disabled={loading}>Submit</Button>
                                     </Form>

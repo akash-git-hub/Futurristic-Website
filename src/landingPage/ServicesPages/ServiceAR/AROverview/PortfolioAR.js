@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack } from 'react-bootstrap';
-import { FaGamepad } from 'react-icons/fa';
 import Slider from 'react-slick';
 
 export const PortfolioAR = () => {
@@ -34,6 +33,11 @@ export const PortfolioAR = () => {
           video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Chirsmas.mp4',
           TumbTitle: 'Branding & Advertising'
         },
+        {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/EngineVR.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/EngineVR.mp4',
+            TumbTitle: ' Engine VR'
+          },
       ]);
 
  var settings ={

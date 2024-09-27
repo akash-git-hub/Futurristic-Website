@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col, Nav, Stack } from 'react-bootstrap';
-import { BiLogoGmail, BiSolidPhoneCall } from 'react-icons/bi';
+import { BiLogoGmail } from 'react-icons/bi';
 import { BsMailbox2 } from 'react-icons/bs';
 import { RiInstagramFill } from "react-icons/ri";
 
-import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import { HiLocationMarker } from 'react-icons/hi';
 import { FaRegCopyright } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -24,7 +24,7 @@ const Footer = ({ scrollToRefs }) => {
 
     return (
         <>
-            <footer className="mt-5 py-5">
+            <Footer className="mt-5 py-5">
                 <Container>
                     <Row>
                         {/* Left side logo */}
@@ -33,13 +33,12 @@ const Footer = ({ scrollToRefs }) => {
                             <h6>We Forge Frontiers</h6>
                             <h5 className='fontWeight-500 mt-5'>Lets Connect</h5>
                             <Stack className='mt-4' direction='horizontal' gap={2}>
-
                                 <a href="https://www.linkedin.com/company/futurristicbusinesssolutions" target="_blank" rel="noopener noreferrer">
                                     <FaLinkedinIn className='fontSize-24 text-black' />
                                 </a>
-                                <a href="https://wa.me/918305348270" target="_blank" rel="noopener noreferrer">
+                                {/* <a href="https://wa.me/918305348270" target="_blank" rel="noopener noreferrer">
                                     <FaWhatsapp className='fontSize-24 text-black' />
-                                </a>
+                                </a> */}
                                 <a href="mailto:support@futurristic.com">
                                     <BiLogoGmail className='fontSize-24 text-black' />
                                 </a>
@@ -56,7 +55,7 @@ const Footer = ({ scrollToRefs }) => {
                             <Nav.Link onClick={() => scrollToRef(scrollToRefs.serviceRef)} className='my-2 text-black TD-none'>Services</Nav.Link>
                             <Nav.Link onClick={() => scrollToRef(scrollToRefs.aboutUsRef)} className='my-2 text-black TD-none'>About Us</Nav.Link>
                             <Nav.Link onClick={() => scrollToRef(scrollToRefs.contactUsRef)} to="" className="my-2    text-black TD-none">Contact Us</Nav.Link>
-                            <Nav.Link as={Link} to="https://futurristic.com/fexperience/" className="my-2    text-black TD-none">Our Products</Nav.Link>
+                            <Nav.Link as={Link} to="https://futurristic.com/fexperience/" target="_blank" className="my-2 text-black TD-none">Our Products</Nav.Link>
                             <Nav.Link as={Link} to='/privacypolicy' target="_blank" className="my-2 text-black TD-none">Privacy Policy</Nav.Link>
                             <Nav.Link as={Link} to="/termsandconditions" target="_blank" className="my-2 text-black TD-none">Terms & Conditions</Nav.Link>
                         </Col>  
@@ -82,7 +81,7 @@ const Footer = ({ scrollToRefs }) => {
                                         <BiSolidPhoneCall className='fontSize-24 mx-3' />
                                         <p className='mb-0'>+91-8305348270</p>
                                     </a>
-                                </Stack> */}
+                                </Stack>   */}
                                 <Stack direction='horizontal' gap={3} style={{
                                     justifyContent: 'end'
                                 }}>
@@ -109,7 +108,7 @@ const Footer = ({ scrollToRefs }) => {
                         </Col>
                     </Row>
                 </Container>
-            </footer>
+            </Footer>
         </>
     )
 }

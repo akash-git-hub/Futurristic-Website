@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 import Service from '../components/Service/Service';
 import ContactUs from '../components/ContactUs/ContactUs';
 import OwnerDetails from '../components/Owner/OwnerDetail';
+import 'aos/dist/aos.css'
 
 const LandingPage = () => {
   const aboutUsRef = useRef(null);
@@ -21,19 +22,21 @@ const LandingPage = () => {
     contactUsRef,
   };
 
+ 
+
   return (
     <div>
       <Header scrollToRefs={scrollToRefs} />
       <MainSlider />
       <div ref={aboutUsRef}>
-        <AboutUs scrollToRefs={scrollToRefs}/>
+        <AboutUs scrollToRefs={scrollToRefs} />
       </div>
-      <div ref={serviceRef}>
-        <Service />
+      <div ref={serviceRef}  >
+        <Service/>
       </div>
-      <div ref={portfolioRef}></div>
-      <SectionTwo />
-      <OwnerDetails />
+      <div ref={portfolioRef} ></div>
+      <SectionTwo  />
+      <OwnerDetails  />
       {/* <HowWeDoIt/> */}  
       <div ref={contactUsRef}>
         <ContactUs />

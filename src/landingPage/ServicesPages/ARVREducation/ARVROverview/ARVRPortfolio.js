@@ -21,7 +21,7 @@ export const ARVRPortfolio = () => {
           },
           {
             image: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-CasinoVR.png',
-            video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/PlateVideo01.mp4',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/ARVRMR/01-CasinoVR.mp4',
             TumbTitle: 'Casino - VR'
           },
           {
@@ -39,6 +39,11 @@ export const ARVRPortfolio = () => {
             video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Chirsmas.mp4',
             TumbTitle: 'Branding & Advertising'
           },
+          {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Game/Human&Dinosaur.mp4',
+            TumbTitle: 'Human & Dinosaur'
+          }
     
       ]);
 

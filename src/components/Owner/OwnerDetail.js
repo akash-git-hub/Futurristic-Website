@@ -1,9 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import AOS from 'aos';
+import { useEffect } from 'react';
 
 const OwnerDetails = () => {
+  useEffect(()=>{
+    AOS.init({duration:2000})
+});
+
   return (
     <Container>
-      <div className="ownerContainer my-5">
+      <div className="ownerContainer my-5" data-aos="fade-up">
         <Row className="justify-content-center">
           <Col lg={6} md={6} sm={12} xs={12}>
             <div className="OwnerDetail" style={{ margin: '20px 0px' }}>

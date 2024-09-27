@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
 import { Button, Col, Container, Row, Stack } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 
 const Service = () => {
+
+    useEffect(()=>{
+        AOS.init({duration:2000})
+    });
     return (
         <>
             <div className="ServiceContainer mt-5 mb-5">
                 <div className="ServiceContent mt-4 mb-4">
-                    <Container>
+                    <Container  data-aos="fade-up">
                         <h1 className='text-center mt-3 fontWeight-800'>Take A Glimpse At Our Services</h1>
                         <h5 className='mb-5'>Explore Futurristic's array of innovative services designed to propel your vision forward.</h5>
                         <Row>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { Button, Stack } from 'react-bootstrap';
 
 const MainSlider = () => {
     const [index, setIndex] = useState(0);
@@ -10,9 +9,9 @@ const MainSlider = () => {
         setIndex(selectedIndex);
     };
 
-    const handleIconClick = () => {
-        setClicked(!isClicked);
-    };
+    // const handleIconClick = () => {
+    //     setClicked(!isClicked);
+    // };
     return (
         <>
             <Carousel activeindex={index} onSelect={handleSelect} controls={false}>

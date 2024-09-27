@@ -52,7 +52,7 @@ export const PrivacyContent = () => {
                             </div>
                             <div className='my-4'>
                                 <Stack direction='row' gap={1}>
-                                    <h1>4. Data Securityt</h1>
+                                    <h1>4. Data Security</h1>
                                     <h4>We employ industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, please be aware that no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.</h4>
                                 </Stack>
                             </div>
