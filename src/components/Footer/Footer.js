@@ -37,9 +37,9 @@ const Footer = ({ scrollToRefs }) => {
                                 <a href="https://www.linkedin.com/company/futurristicbusinesssolutions" target="_blank" rel="noopener noreferrer">
                                     <FaLinkedinIn className='fontSize-24 text-black' />
                                 </a>
-                                <a href="https://wa.me/918305348270" target="_blank" rel="noopener noreferrer">
+                                {/* <a href="https://wa.me/918305348270" target="_blank" rel="noopener noreferrer">
                                     <FaWhatsapp className='fontSize-24 text-black' />
-                                </a>
+                                </a> */}
                                 <a href="mailto:support@futurristic.com">
                                     <BiLogoGmail className='fontSize-24 text-black' />
                                 </a>
@@ -82,7 +82,7 @@ const Footer = ({ scrollToRefs }) => {
                                         <BiSolidPhoneCall className='fontSize-24 mx-3' />
                                         <p className='mb-0'>+91-8305348270</p>
                                     </a>
-                                </Stack> */}
+                                </Stack>   */}
                                 <Stack direction='horizontal' gap={3} style={{
                                     justifyContent: 'end'
                                 }}>

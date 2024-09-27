@@ -22,14 +22,14 @@ export const TermConditionContent = () => {
                             </div>
                             <div className='my-4'>
                                 <Stack direction='row' gap={0}>
-                                    <h2>2. Changes to Terms</h2>
+                                    <h1>2. Changes to Terms</h1>
                                     <h4>We reserve the right to modify these Terms at any time. We will notify you of any changes by updating the "Last Updated" date of these Terms and posting the revised Terms on our website. Your continued use of our Services after such changes constitutes your acceptance of the new Terms.</h4>
                                 </Stack>
                             </div>
                             <div className='my-4'>
                                 <Stack direction='row' gap={0}>
-                                    <h2>3. Services</h2>
-                                    <h4>Futurristic Business Solutions provides immersive technology solutions, including but not limited to augmented reality (AR), virtual reality (VR), mixed reality (MR), extended reality (XR), game development, web-based AR (webAR), metaverse development, and blockchain solutions.</h4>
+                                    <h1>3. Services</h1>
+                                    <h4>Futurristic Business Solutions provides immersive technology solutions, including but not limited to Augmented Reality (AR), Virtual Reality (VR), Mixed Reality (MR), Extended Reality (XR), Game development, Web-based AR (webAR), Metaverse Development, Vision Pro Game Development, and Blockchain Solutions.</h4>
                                 </Stack>
                             </div>
                             <div className='my-4'>
@@ -91,7 +91,7 @@ export const TermConditionContent = () => {
                             <div className='my-4'>
                                 <Stack direction='row' gap={1}>
                                     <h1>11. Governing Law</h1>
-                                    <h4>YThese Terms and your use of our Services are governed by and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law principles. You agree to submit to the personal jurisdiction of the state and federal courts located in [Your Country/State] for the purpose of litigating all such claims or disputes.</h4>
+                                    <h4>These Terms and your use of our Services are governed by and construed in accordance with the laws of India, without regard to its conflict of law principles. You agree to submit to the personal jurisdiction of the state and federal courts located in  India for the purpose of litigating all such claims or disputes.</h4>
                                 </Stack>
                             </div>
                             <div className='my-4'>
@@ -103,7 +103,7 @@ export const TermConditionContent = () => {
                             <div className='my-4'>
                                 <Stack direction='row' gap={1}>
                                     <h1>Contact Us</h1>
-                                    <h4>If you have any questions about these Terms, please contact us at:</h4>
+                                    <h4>If you have any questions about these Terms, please contact us at <a href="mailto:support@futurristic.com" target='_blank'>support@futurristic.com</a></h4>
                                 </Stack>
                             </div>
                             <div className='my-4'>

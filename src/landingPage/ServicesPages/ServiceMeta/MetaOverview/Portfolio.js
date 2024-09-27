@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, Col, Container, Row, Stack } from 'react-bootstrap';
 import Slider from 'react-slick';
 
+
 export const Portfolio = () => {
     const [index, setIndex] = useState(0);
     const [isHovered, setIsHovered] = useState([false, false, false, false]);
@@ -33,6 +34,21 @@ export const Portfolio = () => {
             video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-EducationMeta.mp4',
             TumbTitle: 'Training Metaverse'
         },
+        {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-SkillsetMetaverse.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/01-SkillsetMetaverse.mp4',
+            TumbTitle: 'Skillset Metaverse '
+          },
+          {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/EducationMetaverse.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/EducationMetaverse .mp4',
+            TumbTitle: 'Education Metaverse'
+          },
+          {
+            image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/SaudiMetaverse.png',
+            video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/SaudiMetaverse.mp4',
+            TumbTitle: 'Saudi Metaverse'
+          },
     ]);
 
     var settings ={

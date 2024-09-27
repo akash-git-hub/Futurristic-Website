@@ -24,49 +24,49 @@ function App() {
   // Individual Components with Meta
   const LandingPageWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Futurristic" description="Welcome to our landing page!" />
+      <RouteSpecificMeta title="Futurristic" description="Immersive tech solution provider. Vision pro app development, augmented reality, virtual reality, mixed reality, extended reality, Metaverse development, blockchain, and much more. " />
       <LandingPage />
     </>
   );
   
   const MetaServicesWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Metaverse Development | Metaverse Services & Solutions" description="Explore professional Metaverse Services & Solutions, offering outstanding AR VR development for immersive experiences to drive engagement and growth." />
+      <RouteSpecificMeta title="Metaverse Development | Metaverse Services & Solutions" description="Explore cutting-edge Metaverse consulting services & solutions, expert Metaverse development, and immersive experiences tailored for your business growth. " />
       <MetaServices />
     </>
   );
   
   const WebARServicesWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Web AR-Based Marketing Solutions | Web Based AR" description="DDiscover cutting-edge Web based augmented reality marketing solutions tailored to your business needs. Engage your audience with immersive AR experiences." />
+      <RouteSpecificMeta title="Web AR Development and Marketing Solutions | Web Based AR" description="Elevate your marketing efforts with WebAR development. Launch effective Web-based AR campaigns. Achieve more with our WebAR marketing/business solutions! " />
       <WebARServices />
     </>
   );
   
   const BlockChainWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Blockchain Integration and Solutions  | Blockchain Integration and Development Services" description="Have your business benefit from expert Blockchain integration and solutions, ensuring streamlined operations and enhanced security measures." />
+      <RouteSpecificMeta title="Blockchain Integration and Solutions  | Blockchain Integration and Development Services" description="Get expert consultation on blockchain integration and development with Futurristic. Ensure streamlined operations and enhanced security measures." />
       <BlockChain />
     </>
   );
   
   const ARVRTraningWithMeta = () => (
     <>
-      <RouteSpecificMeta title="AR VR Training & Educational Platform" description="Give your AR/VR training & educational platform a boost by offering an immersive experience to your learners. Get enhanced educational outcomes. " />
+      <RouteSpecificMeta title="AR VR Training & Educational Platform" description="Create immersive learning environments with our augmented reality and virtual reality apps development services, focused on training and education excellence." />
       <ARVRTraning />
     </>
   );
   
   const ARVRXRGameWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Interactive AR/VR/XR Game Development" description="Get your first or upgrade existing game with the AR/VR/XR game development services & solutions. Transform player experiences today with us." />
+      <RouteSpecificMeta title="Interactive AR/VR/XR Game Design & Development Services" description="Augmented Reality/Virtual Reality/Extended Reality/Unity/PC/Mobile Game design and development services and solutions. Metaverse integration game development." />
       <ARVRXRGame />
     </>
   );
   
   const MobileAppWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Mobile, Web & Enterprise Development" description="Develop custom mobile applications, websites or web apps, and enterprise platforms like SaaS, PaaS, CRM, etc.  to enhance your digital presence effectively. Start now." />
+      <RouteSpecificMeta title="Mobile Web & Enterprise Development Services" description="Develop custom mobile applications, web apps, and enterprise platforms like SaaS, PaaS, CRM, etc. to enhance your digital presence effectively." />
       <MobileApp />
     </>
   );
