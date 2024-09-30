@@ -97,10 +97,11 @@ img.img-fluid.GameTitleImg {
 }
 
 .CardBodyText {
-    position: absolute;
+    
     width: 100%;
     bottom: 0px;
-    color: #fff;
+    white-space: nowrap; 
+    /* color: #fff; */
     text-align: left;
     font-weight: 600;
 }
@@ -133,6 +134,10 @@ p.parahalf {
 
 .displayNone {
     display: none;
+}
+
+.scaleText {
+    transform: scale(1);
 }
 
 .scaleText {
@@ -768,9 +773,7 @@ img.img-fluid.Img-25 {
         width: 100%;
     }
 
-    .scaleText {
-        transform: scale(1);
-    }
+  
 
     .carousel-caption {
         right: 5%;

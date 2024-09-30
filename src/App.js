@@ -1,5 +1,5 @@
 import './App.css';
-import './assets/css/Style.css';
+import './assets/css/Style.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './landingPage/LandingPage';
 import { MetaServices } from './landingPage/ServicesPages/ServiceMeta';
@@ -31,14 +31,14 @@ function App() {
   
   const MetaServicesWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Metaverse Development | Metaverse Services & Solutions" description="Explore professional Metaverse Services & Solutions, offering outstanding AR VR development for immersive experiences to drive engagement and growth." />
+      <RouteSpecificMeta title="Metaverse Development | Metaverse Services & Solutions" description="Explore cutting-edge Metaverse consulting services & solutions, expert Metaverse development, and immersive experiences tailored for your business growth. " />
       <MetaServices />
     </>
   );
   
   const WebARServicesWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Web AR-Based Marketing Solutions | Web Based AR" description="DDiscover cutting-edge Web based augmented reality marketing solutions tailored to your business needs. Engage your audience with immersive AR experiences." />
+      <RouteSpecificMeta title="Web AR Development and Marketing Solutions | Web Based AR" description="Elevate your marketing efforts with WebAR development. Launch effective Web-based AR campaigns. Achieve more with our WebAR marketing/business solutions! " />
       <WebARServices />
     </>
   );

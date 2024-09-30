@@ -116,7 +116,7 @@ export const PortfolioAR = () => {
                                     <Card.Img variant="top" src={card.image} />
                                 )}
                                 <Card.Body
-                                    className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                                    className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                                         }`}
                                 >
                                     <Stack direction="vertical" gap={0}>
@@ -152,7 +152,7 @@ export const PortfolioAR = () => {
                                 <Card.Img variant="top" src={card.image} />
                             )}
                             <Card.Body
-                                className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                                className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                                     }`}
                             >
                                 <Stack direction="vertical" gap={0}>

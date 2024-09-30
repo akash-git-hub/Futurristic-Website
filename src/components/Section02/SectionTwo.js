@@ -9,12 +9,18 @@ const SectionTwo = () => {
   const [isHovered, setIsHovered] = useState([false, false, false, false]);
   const [showModal, setShowModal] = useState(false);
   const [ ModalVideoName, setModalVideoName ] = useState('');
-
+  const [contentReady, setContentReady] = useState(true);
+  const [activeTab, setActiveTab] = useState('all'); 
   const [modalVideoSrc, setModalVideoSrc] = useState('');
 
   useEffect(()=>{
-    AOS.init({duration:2000})
-});
+    AOS.init({duration:2000});
+    setContentReady(false);  
+    const timer = setTimeout(() => {
+      setContentReady(true); 
+    }, 100);  
+    return () => clearTimeout(timer);
+},[activeTab]);
 
   // ------------Portfolio for Metaverse------------------------
   const [cardContent] = useState([
@@ -236,7 +242,7 @@ const SectionTwo = () => {
   var settings ={
     dots: true,
     infinite: false,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
@@ -283,7 +289,7 @@ const SectionTwo = () => {
             Discover Our Dazzling Portfolio
           </h1>
           <h5>Here are some Futurristic's standout projects, exemplifying innovation and excellence in every endeavor. Explore now.</h5>
-          <Tabs defaultActiveKey="all" id="uncontrolled-tab-example">
+          <Tabs defaultActiveKey="all" activeKey={activeTab} onSelect={(k) => setActiveTab(k)} id="uncontrolled-tab-example">
 
             <Tab eventKey="all" title="Metaverse" className='TabDark' variant="dark">
             <Row className='p-4'>
@@ -313,12 +319,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                         {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -349,7 +356,7 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
                         <Stack direction="vertical" gap={0}>
@@ -390,12 +397,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                        {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -426,12 +434,13 @@ const SectionTwo = () => {
                       <Card.Img variant="top" src={card.image} />
                     )}
                     <Card.Body
-                      className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                      className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                         }`}
                     >
-                      <Stack direction="vertical" gap={0}>
-                        <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                      </Stack>
+                      {contentReady && (
+                        <Stack direction="vertical" gap={0}>
+                          <h5 className="text-left mb-3">{card.TumbTitle}</h5>
+                        </Stack>)}
                     </Card.Body>
                   </Card>
                 </Col>
@@ -468,12 +477,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                       {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -504,12 +514,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                        {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -546,12 +557,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                         {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -581,12 +593,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                         {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -623,12 +636,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                         {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -658,12 +672,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                        {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -699,12 +714,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                         {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
@@ -734,12 +750,13 @@ const SectionTwo = () => {
                         <Card.Img variant="top" src={card.image} />
                       )}
                       <Card.Body
-                        className={`CardBodyText02 pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
+                        className={`CardBodyText pb-0 ${isHovered === cardIndex ? 'hidden' : 'visible'
                           }`}
                       >
+                         {contentReady && (
                         <Stack direction="vertical" gap={0}>
                           <h5 className="text-left mb-3">{card.TumbTitle}</h5>
-                        </Stack>
+                        </Stack>)}
                       </Card.Body>
                     </Card>
                   </Col>
