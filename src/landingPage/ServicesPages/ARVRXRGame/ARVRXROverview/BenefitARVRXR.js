@@ -53,7 +53,7 @@ export const BenefitsARVRXR = () => {
                         </div>
                     </Col>
                      <Col md={2} sm={3} xs={4}>
-                        <div className="BenefitContent">
+                        <div className="BenefitContent1">
                             <img src={benefit5} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
                                 <h5 className="mb-2">Personalized customer interactions</h5>
@@ -61,10 +61,10 @@ export const BenefitsARVRXR = () => {
                         </div>
                     </Col>
                      <Col md={2} sm={3} xs={4}>
-                        <div className="BenefitContent">
+                        <div className="BenefitContent2">
                             <img src={benefit6} className="img-fluid benefitIcons" alt="" />
                             <div className="vstack gap-1">
-                                <h5 className="mb-2">Competitive edge</h5>
+                                <h5 className="mb-2">Distinct Market Position </h5>
                             </div>
                         </div>
                     </Col>

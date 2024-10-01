@@ -45,7 +45,7 @@ function App() {
   
   const BlockChainWithMeta = () => (
     <>
-      <RouteSpecificMeta title="Blockchain Integration and Solutions  | Blockchain Integration and Development Services" description="Get expert consultation on blockchain integration and development with Futurristic. Ensure streamlined operations and enhanced security measures." />
+      <RouteSpecificMeta title="Blockchain Integration and Solutions  | Blockchain Integration and Development Services" description="Get expert consultation on custom blockchain integration and development with Futurristic. Ensure streamlined operations and enhanced security measures." />
       <BlockChain />
     </>
   );

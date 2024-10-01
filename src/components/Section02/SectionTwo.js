@@ -62,7 +62,7 @@ const SectionTwo = () => {
     {
       image: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/SaudiMetaverse.png',
       video: 'https://futurristic.s3.amazonaws.com/image/video/Metaverse/SaudiMetaverse.mp4',
-      TumbTitle: 'Saudi Metaverse'
+      TumbTitle: 'Exhibition Metaverse'
     },
   ]);
 

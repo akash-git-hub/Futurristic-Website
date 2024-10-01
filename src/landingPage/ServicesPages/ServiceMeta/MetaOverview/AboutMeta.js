@@ -20,7 +20,7 @@ export const AboutMeta = () => {
                                         You are at the right place. Let us handle your Metaverse-related worries and develop a tailored-made virtual 
                                         experience that aligns perfectly with your vision, engages your audience, and drives your business success.
                                          Help your users shop, work, play and hang out together in real time effectively and easily. You can also try
-                                          Metaverse for games by leveraging <Link to='/interactive-ar-vr-xr-game-development' target='blank'>Interactive AR/VR/XR game development</Link> services from us.</p>
+                                          Metaverse for games by leveraging <Link to='/interactive-ar-vr-xr-game-development' target='blank'>AR/VR/XR game development</Link> services from us.</p>
                                     </div>
                                 </div>
                             </Col>

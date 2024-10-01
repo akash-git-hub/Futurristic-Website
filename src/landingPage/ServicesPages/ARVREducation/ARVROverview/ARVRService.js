@@ -29,7 +29,7 @@ export const ARVRservice = () => {
                                     <div className="d-flex justify-content-center p-3">
                                          <img src={service1} className="img-fluid serviceIcon" alt="" />
                                     </div><h5 className="mb-2 text-justify fontWeight-800 text-center">AR/VR Consultation Services</h5>
-                                    <p className="text-justify text-grey-500">Get a free consultation from the <Link to='/'>expert AR/VR design and development</Link> team to shape your immersive learning solutions effectively. Explore and unlock possibilities to enhance your training and education initiative.</p>
+                                    <p className="text-justify text-grey-500">Get a free consultation from the <Link to='/'>AR VR Development Services</Link> team to shape your immersive learning solutions effectively. Explore and unlock possibilities to enhance your training and education initiative.</p>
                                 </div>
                             </div>
                             <div className='BenefitContentMetashadow'></div>

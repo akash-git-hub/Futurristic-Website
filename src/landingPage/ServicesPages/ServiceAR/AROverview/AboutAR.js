@@ -17,7 +17,7 @@ export const AboutAR = () => {
                                         <p className="text-center fontSize-24 fontWeight-500" style={{ color: 'rgb(134, 134, 139)' }}>
                                         Our team of experts specializes in implementing Web-based AR solutions tailored to elevate your product, helping in achieving 
                                         business goals. We tackle challenges head-on, provide innovative solutions resulting in increased user engagement, sales & brand loyalty.
-                                        And for an immersive twist, why not explore <Link to='/ar-vr-training-&-educational-platform' target='_blank'>expert AR/VR design and development</Link> services to create an unforgettable experience for your users?
+                                        And for an immersive twist, why not explore <Link to='/ar-vr-training-&-educational-platform' target='_blank'>AR VR Development Services</Link> services to create an unforgettable experience for your users?
                                         </p>
                                     </div>
                                 </div>

@@ -22,7 +22,7 @@ export const ServiceAR = () => {
                                 Web AR-Based Marketing Solutions
                             </h1>
                             <p className="text-center text-grey-500 fontSize-20 ">
-                                Give a Boost to Your Business with Futurristic’s <Link to='/' target='_blank'>web based augmented reality</Link> services and solutions, with innovative and immersive augmented reality experiences.
+                                Give a Boost to Your Business with Futurristic’s <Link to='/' target='_blank'>web ar marketing solutions</Link> services and solutions, with innovative and immersive augmented reality experiences.
                             </p>
                         </div>
                     </div>
